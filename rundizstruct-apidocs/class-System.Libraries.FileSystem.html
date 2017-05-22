@@ -142,7 +142,7 @@
 				<li><a href="class-System.Libraries.Modules.html">Modules</a></li>
 				<li><a href="class-System.Libraries.Router.html">Router</a></li>
 				<li><a href="class-System.Libraries.Themes.html">Themes</a></li>
-				<li><a href="class-System.Libraries.Uri.html">Uri</a></li>
+				<li><a href="class-System.Libraries.Url.html">Url</a></li>
 				<li><a href="class-System.Libraries.Xml.html">Xml</a></li>
 			</ul>
 
@@ -217,7 +217,7 @@
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-System.Libraries.FileSystem.html#12-147" title="Go to source code">System/Libraries/FileSystem.php</a>
+			<b>Located at</b> <a href="source-class-System.Libraries.FileSystem.html#12-247" title="Go to source code">System/Libraries/FileSystem.php</a>
 		<br>
 	</div>
 
@@ -250,9 +250,52 @@
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$root</var></dt>
-					<dd>Path to root folder that this class will be working with. If leave this empty it will be use STORAGE_PATH by default.</dd>
+					<dd>Path to root folder that this class will be working with. If leave this empty it will be use STORAGE_PATH by default. No trailing slash.</dd>
 				</dl></div>
 
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFile" id="_createFile">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createFile">#</a>
+		<code><a href="source-class-System.Libraries.FileSystem.html#54-66" title="Go to source code">createFile</a>( <span>string <var>$path</var></span>, <span>string <var>$contents</var></span> )</code>
+
+		<div class="description short">
+			<p>Create new file.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create new file.</p>
+
+<p>It is an alias of <code>writeFile()</code> method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd>Path to the file to create and write that is not included with $root in the constructor.</dd>
+					<dt><var>$contents</var></dt>
+					<dd>The file contents.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>Return true on success, false on failure.
+				</div>
 
 
 
@@ -272,7 +315,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createFolder">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#54-63" title="Go to source code">createFolder</a>( <span>string <var>$dirname</var></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#69-78" title="Go to source code">createFolder</a>( <span>string <var>$dirname</var></span> )</code>
 
 		<div class="description short">
 			<p>Create folder.</p>
@@ -311,7 +354,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_deleteFolder">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#66-106" title="Go to source code">deleteFolder</a>( <span>string <var>$dirname</var></span>, <span>boolean <var>$delete_self</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#81-121" title="Go to source code">deleteFolder</a>( <span>string <var>$dirname</var></span>, <span>boolean <var>$delete_self</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Delete folder and its content.</p>
@@ -352,7 +395,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getTimestamp">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#109-118" title="Go to source code">getTimestamp</a>( <span>string <var>$path</var></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#124-133" title="Go to source code">getTimestamp</a>( <span>string <var>$path</var></span> )</code>
 
 		<div class="description short">
 			<p>Get file timestamp.</p>
@@ -379,6 +422,88 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="isDir" id="_isDir">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isDir">#</a>
+		<code><a href="source-class-System.Libraries.FileSystem.html#136-179" title="Go to source code">isDir</a>( <span>string <var>$path</var></span>, <span>boolean|null <var>$case_sensitive</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Check for is file exists and it is folder (or directory).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check for is file exists and it is folder (or directory).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd>Path to the folder (or directory) to check, it must be inside the $root in class constructor.</dd>
+					<dt><var>$case_sensitive</var></dt>
+					<dd>Set to <code>true</code> to check by case sensitive, <code>false</code> to case insensitive, null means up to the OS. The null value will be use PHP <code>is_dir()</code> function.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>Returns <code>true</code> if the filename exists and is a directory, <code>false</code> otherwise.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isFile" id="_isFile">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isFile">#</a>
+		<code><a href="source-class-System.Libraries.FileSystem.html#182-218" title="Go to source code">isFile</a>( <span>string <var>$path</var></span>, <span>boolean|null <var>$case_sensitive</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Check for is file exists and it is file.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check for is file exists and it is file.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd>Path to the file to check, it must be inside the $root in class constructor.</dd>
+					<dt><var>$case_sensitive</var></dt>
+					<dd>Set to <code>true</code> to check by case sensitive, <code>false</code> to case insensitive, null means up to the OS. The null value will be use PHP <code>is_file()</code> function.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>Returns <code>true</code> if the filename exists and is a file, <code>false</code> otherwise.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="listFilesSubFolders" id="_listFilesSubFolders">
 
 		<td class="attributes"><code>
@@ -391,7 +516,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_listFilesSubFolders">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#121-131" title="Go to source code">listFilesSubFolders</a>( <span>string <var>$dirname</var></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#221-231" title="Go to source code">listFilesSubFolders</a>( <span>string <var>$dirname</var></span> )</code>
 
 		<div class="description short">
 			<p>List all files and subfolders in specified $dirname.</p>
@@ -430,14 +555,14 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_writeFile">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#134-144" title="Go to source code">writeFile</a>( <span>string <var>$path</var></span>, <span>string <var>$contents</var></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#234-244" title="Go to source code">writeFile</a>( <span>string <var>$path</var></span>, <span>string <var>$contents</var></span> )</code>
 
 		<div class="description short">
-			<p>Write file.</p>
+			<p>Write file. (Create a file).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Write file.</p>
+			<p>Write file. (Create a file).</p>
 
 
 				<h4>Parameters</h4>
@@ -509,11 +634,11 @@
 				<a href="source-class-System.Libraries.FileSystem.html#29-32" title="Go to source code"><var>$root</var></a>
 
 			<div class="description short">
-				<p>Path to root folder that this class will be working with.</p>
+				<p>Path to root folder that this class will be working with. No trailing slash.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Path to root folder that this class will be working with.</p>
+				<p>Path to root folder that this class will be working with. No trailing slash.</p>
 
 			</div>
 		</td>

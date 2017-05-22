@@ -226,7 +226,7 @@
 
 				<b>Author:</b>
 				Vee W<br>
-			<b>Located at</b> <a href="source-class-System.Core.Models.ModulesDb.html#12-188" title="Go to source code">System/Core/Models/ModulesDb.php</a>
+			<b>Located at</b> <a href="source-class-System.Core.Models.ModulesDb.html#12-225" title="Go to source code">System/Core/Models/ModulesDb.php</a>
 		<br>
 	</div>
 
@@ -271,6 +271,45 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="add" id="_add">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add">#</a>
+		<code><a href="source-class-System.Core.Models.ModulesDb.html#43-59" title="Go to source code">add</a>( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Add a module to database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add a module to database.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>Associate array. The key is table fields.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Return associate array with result, module_id in the keys.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="buildConfigFile" id="_buildConfigFile">
 
 		<td class="attributes"><code>
@@ -283,7 +322,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_buildConfigFile">#</a>
-		<code><a href="source-class-System.Core.Models.ModulesDb.html#43-101" title="Go to source code">buildConfigFile</a>( )</code>
+		<code><a href="source-class-System.Core.Models.ModulesDb.html#62-120" title="Go to source code">buildConfigFile</a>( )</code>
 
 		<div class="description short">
 			<p>Build the modules file from db. Only build from modules that enabled.</p>
@@ -305,6 +344,45 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-System.Core.Models.ModulesDb.html#123-138" title="Go to source code">delete</a>( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Delete a module from database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete a module from database.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>The associate array that the key is matched table fields.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Return associate array with result in key.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="get" id="_get">
 
 		<td class="attributes"><code>
@@ -317,7 +395,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get">#</a>
-		<code><a href="source-class-System.Core.Models.ModulesDb.html#104-137" title="Go to source code">get</a>( <span>mixed <var>$module</var> = <span class="php-quote">''</span></span> )</code>
+		<code><a href="source-class-System.Core.Models.ModulesDb.html#141-174" title="Go to source code">get</a>( <span>mixed <var>$module</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			<p>Get the enabled module(s).</p>
@@ -356,7 +434,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getConfigFile">#</a>
-		<code><a href="source-class-System.Core.Models.ModulesDb.html#140-172" title="Go to source code">getConfigFile</a>( )</code>
+		<code><a href="source-class-System.Core.Models.ModulesDb.html#177-209" title="Go to source code">getConfigFile</a>( )</code>
 
 		<div class="description short">
 			<p>Get the path to modules file.<br>
@@ -392,7 +470,7 @@ The configurations are in db inside modules table and it will be auto generate i
 
 		<td class="name"><div>
 		<a class="anchor" href="#_load">#</a>
-		<code><a href="source-class-System.Core.Models.ModulesDb.html#175-185" title="Go to source code">load</a>( )</code>
+		<code><a href="source-class-System.Core.Models.ModulesDb.html#212-222" title="Go to source code">load</a>( )</code>
 
 		<div class="description short">
 			<p>Load the modules file into variable.</p>

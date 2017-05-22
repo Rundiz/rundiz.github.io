@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class System\Libraries\Uri</title>
+	<title>Class System\Libraries\Url</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -142,7 +142,7 @@
 				<li><a href="class-System.Libraries.Modules.html">Modules</a></li>
 				<li><a href="class-System.Libraries.Router.html">Router</a></li>
 				<li><a href="class-System.Libraries.Themes.html">Themes</a></li>
-				<li class="active"><a href="class-System.Libraries.Uri.html">Uri</a></li>
+				<li class="active"><a href="class-System.Libraries.Url.html">Url</a></li>
 				<li><a href="class-System.Libraries.Xml.html">Xml</a></li>
 			</ul>
 
@@ -192,11 +192,11 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class Uri</h1>
+	<h1>Class Url</h1>
 
 
 	<div class="description">
-	<p>Works with URIs such as create URI with multi language support.</p>
+	<p>Works with URLs such as create URL with multi language support.</p>
 	</div>
 
 
@@ -215,7 +215,7 @@
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-System.Libraries.Uri.html#14-241" title="Go to source code">System/Libraries/Uri.php</a>
+			<b>Located at</b> <a href="source-class-System.Libraries.Url.html#14-241" title="Go to source code">System/Libraries/Url.php</a>
 		<br>
 	</div>
 
@@ -235,7 +235,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-System.Libraries.Uri.html#35-51" title="Go to source code">__construct</a>( <span>Interop\Container\ContainerInterface <var>$CI</var></span> )</code>
+		<code><a href="source-class-System.Libraries.Url.html#35-51" title="Go to source code">__construct</a>( <span>Interop\Container\ContainerInterface <var>$CI</var></span> )</code>
 
 		<div class="description short">
 			<p>Class constructor.</p>
@@ -253,7 +253,7 @@
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="createUri" id="_createUri">
+	<tr data-order="createUrl" id="_createUrl">
 
 		<td class="attributes"><code>
 			 public 
@@ -264,26 +264,26 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_createUri">#</a>
-		<code><a href="source-class-System.Libraries.Uri.html#54-68" title="Go to source code">createUri</a>( <span>string <var>$uri</var></span> )</code>
+		<a class="anchor" href="#_createUrl">#</a>
+		<code><a href="source-class-System.Libraries.Url.html#54-68" title="Go to source code">createUrl</a>( <span>string <var>$url</var></span> )</code>
 
 		<div class="description short">
-			<p>Create URI string begins from base URI and may follow with language and your specified URI.</p>
+			<p>Create URL string begins from base URL and may follow with language and your specified URL.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Create URI string begins from base URI and may follow with language and your specified URI.</p>
+			<p>Create URL string begins from base URL and may follow with language and your specified URL.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$uri</var></dt>
-					<dd>The URI path you want to create URI with base path to. Example: "languages" will be create /rundizstruct-install-path/public/languages. It can begins with or without slash (/).</dd>
+					<dt><var>$url</var></dt>
+					<dd>The URL path you want to create URL with base path to. Example: "languages" will be create /rundizstruct-install-path/public/languages. It can begins with or without slash (/).</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					string<br>Return base URI and maybe with language locale URI and your specified URI.
+					string<br>Return base URL and maybe with language locale URI and your specified URL.
 				</div>
 
 
@@ -292,7 +292,7 @@
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getBaseUri" id="_getBaseUri">
+	<tr data-order="getBaseUrl" id="_getBaseUrl">
 
 		<td class="attributes"><code>
 			 public 
@@ -303,28 +303,28 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_getBaseUri">#</a>
-		<code><a href="source-class-System.Libraries.Uri.html#71-123" title="Go to source code">getBaseUri</a>( <span>boolean <var>$with_lang</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$trailing_slash</var> = <span class="php-keyword1">false</span></span> )</code>
+		<a class="anchor" href="#_getBaseUrl">#</a>
+		<code><a href="source-class-System.Libraries.Url.html#71-123" title="Go to source code">getBaseUrl</a>( <span>boolean <var>$with_lang</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$trailing_slash</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
-			<p>Get base URI with multi language support.</p>
+			<p>Get base URL with multi language support.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Get base URI with multi language support.</p>
+			<p>Get base URL with multi language support.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$with_lang</var></dt>
-					<dd>Set to true to include the language locale URI with the base URI (if configuration was set to use language via URI and/or default language is set to visible). Set to false and the language locale URI will always not included.</dd>
+					<dd>Set to true to include the language locale URI with the base URL (if configuration was set to use language via URL and/or default language is set to visible). Set to false and the language locale URI will always not included.</dd>
 					<dt><var>$trailing_slash</var></dt>
-					<dd>To return with trailing slash set this to true, otherwise set to false. If base URI is empty it will always return a single slash (/).</dd>
+					<dd>To return with trailing slash set this to true, otherwise set to false. If base URL is empty it will always return a single slash (/).</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					string<br><p>Return base URI. Example: /rundizstruct-install-path/public/[language] If you install RundizStruct in /rundizstruct-install-path and the public folder is /public.
+					string<br><p>Return base URL. Example: /rundizstruct-install-path/public/[language] If you install RundizStruct in /rundizstruct-install-path and the public folder is /public.
 The [language] may be visible or not is up to the configuration.</p>
 				</div>
 
@@ -334,7 +334,7 @@ The [language] may be visible or not is up to the configuration.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getCurrentUri" id="_getCurrentUri">
+	<tr data-order="getCurrentUrl" id="_getCurrentUrl">
 
 		<td class="attributes"><code>
 			 public 
@@ -345,26 +345,26 @@ The [language] may be visible or not is up to the configuration.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_getCurrentUri">#</a>
-		<code><a href="source-class-System.Libraries.Uri.html#126-172" title="Go to source code">getCurrentUri</a>( <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
+		<a class="anchor" href="#_getCurrentUrl">#</a>
+		<code><a href="source-class-System.Libraries.Url.html#126-172" title="Go to source code">getCurrentUrl</a>( <span>boolean <var>$raw</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
-			<p>Get current URI.</p>
+			<p>Get current URL.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Get current URI.</p>
+			<p>Get current URL.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$raw</var></dt>
-					<dd>Set to true if you want to get the current URI exactly the same as you see in the address bar. Set to false to get it from the system which maybe different from what you see in the address bar.</dd>
+					<dd>Set to true if you want to get the current URL exactly the same as you see in the address bar. Set to false to get it from the system which maybe different from what you see in the address bar.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					string<br>Return current URI. Example: /rundizstruct-install-path/public/my-current-uri
+					string<br>Return current URL. Example: /rundizstruct-install-path/public/my-current-uri
 				</div>
 
 
@@ -373,7 +373,7 @@ The [language] may be visible or not is up to the configuration.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getPublicUri" id="_getPublicUri">
+	<tr data-order="getPublicUrl" id="_getPublicUrl">
 
 		<td class="attributes"><code>
 			 public 
@@ -384,15 +384,15 @@ The [language] may be visible or not is up to the configuration.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_getPublicUri">#</a>
-		<code><a href="source-class-System.Libraries.Uri.html#175-185" title="Go to source code">getPublicUri</a>( )</code>
+		<a class="anchor" href="#_getPublicUrl">#</a>
+		<code><a href="source-class-System.Libraries.Url.html#175-185" title="Go to source code">getPublicUrl</a>( )</code>
 
 		<div class="description short">
-			<p>Get the URI to public path (public is the folder that contain index.php).</p>
+			<p>Get the URL to public path (public is the folder that contain index.php).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Get the URI to public path (public is the folder that contain index.php).</p>
+			<p>Get the URL to public path (public is the folder that contain index.php).</p>
 
 <p>This will always return with trailing slash.</p>
 
@@ -400,7 +400,7 @@ The [language] may be visible or not is up to the configuration.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					string<br>Return the URI path to public.
+					string<br>Return the URL path to public.
 				</div>
 
 
@@ -409,7 +409,7 @@ The [language] may be visible or not is up to the configuration.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getThemeUri" id="_getThemeUri">
+	<tr data-order="getThemeUrl" id="_getThemeUrl">
 
 		<td class="attributes"><code>
 			 public 
@@ -420,15 +420,15 @@ The [language] may be visible or not is up to the configuration.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_getThemeUri">#</a>
-		<code><a href="source-class-System.Libraries.Uri.html#188-202" title="Go to source code">getThemeUri</a>( <span><code><a href="class-System.Libraries.Themes.html">System\Libraries\Themes</a></code> <var>$Theme</var></span> )</code>
+		<a class="anchor" href="#_getThemeUrl">#</a>
+		<code><a href="source-class-System.Libraries.Url.html#188-202" title="Go to source code">getThemeUrl</a>( <span><code><a href="class-System.Libraries.Themes.html">System\Libraries\Themes</a></code> <var>$Theme</var></span> )</code>
 
 		<div class="description short">
-			<p>Get the URI to the active theme.</p>
+			<p>Get the URL to the active theme.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Get the URI to the active theme.</p>
+			<p>Get the URL to the active theme.</p>
 
 <p>This will always return with trailing slash.</p>
 
@@ -441,7 +441,7 @@ The [language] may be visible or not is up to the configuration.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					string<br>Return the URI to active theme. Example: /rundizstruct-installed-path/public/Themes/[your_theme_name]/
+					string<br>Return the URL to active theme. Example: /rundizstruct-installed-path/public/Themes/[your_theme_name]/
 				</div>
 
 
@@ -450,7 +450,7 @@ The [language] may be visible or not is up to the configuration.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getUriSegments" id="_getUriSegments">
+	<tr data-order="getUrlSegments" id="_getUrlSegments">
 
 		<td class="attributes"><code>
 			 public 
@@ -461,17 +461,17 @@ The [language] may be visible or not is up to the configuration.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_getUriSegments">#</a>
-		<code><a href="source-class-System.Libraries.Uri.html#205-238" title="Go to source code">getUriSegments</a>( <span>integer <var>$segment_number</var> = <span class="php-num">0</span></span> )</code>
+		<a class="anchor" href="#_getUrlSegments">#</a>
+		<code><a href="source-class-System.Libraries.Url.html#205-238" title="Go to source code">getUrlSegments</a>( <span>integer <var>$segment_number</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
-			<p>Get URI segment(s).</p>
+			<p>Get URL segment(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Get URI segment(s).</p>
+			<p>Get URL segment(s).</p>
 
-<p>Return a single URI segment or all of URI segments if <code>$segment_number</code> is 0.</p>
+<p>Return a single URL segment or all of URL segments if <code>$segment_number</code> is 0.</p>
 
 
 				<h4>Parameters</h4>
@@ -517,7 +517,7 @@ The [language] may be visible or not is up to the configuration.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Uri.html#23-26" title="Go to source code"><var>$CI</var></a>
+				<a href="source-class-System.Libraries.Url.html#23-26" title="Go to source code"><var>$CI</var></a>
 
 			<div class="description short">
 				<p>The Slim container class.</p>
@@ -542,7 +542,7 @@ The [language] may be visible or not is up to the configuration.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Uri.html#29-32" title="Go to source code"><var>$current_language_locale_uri</var></a>
+				<a href="source-class-System.Libraries.Url.html#29-32" title="Go to source code"><var>$current_language_locale_uri</var></a>
 
 			<div class="description short">
 				<p>Store current language locale URI. Example: th, en-US, ...</p>

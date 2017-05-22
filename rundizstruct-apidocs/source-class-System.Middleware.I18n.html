@@ -134,13 +134,16 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
+				<li><a href="class-Modules.Home.ConsoleInstaller.html">Modules\Home\ConsoleInstaller</a></li>
 				<li><a href="class-Modules.Home.Controllers.IndexController.html">Modules\Home\Controllers\IndexController</a></li>
+				<li><a href="class-Modules.Languages.ConsoleInstaller.html">Modules\Languages\ConsoleInstaller</a></li>
 				<li><a href="class-Modules.Languages.Controllers.GetLanguagesController.html">Modules\Languages\Controllers\GetLanguagesController</a></li>
 				<li><a href="class-Modules.Languages.Controllers.SetLanguageController.html">Modules\Languages\Controllers\SetLanguageController</a></li>
 				<li><a href="class-System.App.html">System\App</a></li>
 				<li><a href="class-System.CliApp.html">System\CliApp</a></li>
 				<li><a href="class-System.Core.Console.BaseConsole.html">System\Core\Console\BaseConsole</a></li>
 				<li><a href="class-System.Core.Console.Cache.html">System\Core\Console\Cache</a></li>
+				<li><a href="class-System.Core.Console.Modules.html">System\Core\Console\Modules</a></li>
 				<li><a href="class-System.Core.Console.Routes.html">System\Core\Console\Routes</a></li>
 				<li><a href="class-System.Core.Controllers.AdminBaseController.html">System\Core\Controllers\AdminBaseController</a></li>
 				<li><a href="class-System.Core.Controllers.BaseController.html">System\Core\Controllers\BaseController</a></li>
@@ -164,7 +167,7 @@
 				<li><a href="class-System.Libraries.Modules.html">System\Libraries\Modules</a></li>
 				<li><a href="class-System.Libraries.Router.html">System\Libraries\Router</a></li>
 				<li><a href="class-System.Libraries.Themes.html">System\Libraries\Themes</a></li>
-				<li><a href="class-System.Libraries.Uri.html">System\Libraries\Uri</a></li>
+				<li><a href="class-System.Libraries.Url.html">System\Libraries\Url</a></li>
 				<li><a href="class-System.Libraries.Xml.html">System\Libraries\Xml</a></li>
 				<li><a href="class-System.Middleware.I18n.html">System\Middleware\I18n</a></li>
 				<li><a href="class-System.Middleware.TrailingSlashRedirect.html">System\Middleware\TrailingSlashRedirect</a></li>
@@ -173,6 +176,10 @@
 				<li><a href="class-Tests.Rds.Libraries.AssetsTest.html">Tests\Rds\Libraries\AssetsTest</a></li>
 			</ul>
 
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-System.Core.Console.ConsoleInstaller.html">System\Core\Console\ConsoleInstaller</a></li>
+			</ul>
 
 			<h3>Traits</h3>
 			<ul>
@@ -290,7 +297,7 @@
 </span><span id="67" class="l"><a href="#67"> 67: </a>        <span class="php-var">$LanguagesDb</span> = <span class="php-keyword1">new</span> \<span class="php-keyword2">System</span>\Core\Models\LanguagesDb(<span class="php-var">$this</span>-&gt;Db);
 </span><span id="68" class="l"><a href="#68"> 68: </a>        <span class="php-var">$language_locale_uri</span> = <span class="php-keyword1">null</span>;
 </span><span id="69" class="l"><a href="#69"> 69: </a>
-</span><span id="70" class="l"><a href="#70"> 70: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$ConfigDb</span>-&gt;get(<span class="php-quote">'site_lang_method'</span>, <span class="php-quote">'uri'</span>) === <span class="php-quote">'cookie'</span>) {
+</span><span id="70" class="l"><a href="#70"> 70: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$ConfigDb</span>-&gt;get(<span class="php-quote">'site_lang_method'</span>, <span class="php-quote">'url'</span>) === <span class="php-quote">'cookie'</span>) {
 </span><span id="71" class="l"><a href="#71"> 71: </a>            <span class="php-comment">// if detect language using cookie.</span>
 </span><span id="72" class="l"><a href="#72"> 72: </a>            <span class="php-var">$language_cookie_name</span> = <span class="php-quote">'rundizstruct_language'</span>;
 </span><span id="73" class="l"><a href="#73"> 73: </a>            <span class="php-var">$cookies</span> = <span class="php-var">$request</span>-&gt;getCookieParams();
@@ -313,7 +320,7 @@
 </span><span id="90" class="l"><a href="#90"> 90: </a>
 </span><span id="91" class="l"><a href="#91"> 91: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$cookies</span>, <span class="php-var">$language_cookie_name</span>);
 </span><span id="92" class="l"><a href="#92"> 92: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="93" class="l"><a href="#93"> 93: </a>            <span class="php-comment">// if detect language using URI.</span>
+</span><span id="93" class="l"><a href="#93"> 93: </a>            <span class="php-comment">// if detect language using URL.</span>
 </span><span id="94" class="l"><a href="#94"> 94: </a>            <span class="php-comment">// @link https://github.com/SimoTod/slim-multilanguage/blob/master/src/LanguageMiddleware.php Guideline.</span>
 </span><span id="95" class="l"><a href="#95"> 95: </a>            <span class="php-var">$uri</span> = <span class="php-var">$request</span>-&gt;getUri();
 </span><span id="96" class="l"><a href="#96"> 96: </a>            <span class="php-var">$url_path</span> = <span class="php-keyword2">trim</span>(<span class="php-var">$uri</span>-&gt;getPath(), <span class="php-quote">'/'</span>);
@@ -344,11 +351,11 @@
 </span><span id="121" class="l"><a href="#121">121: </a>                <span class="php-var">$cannot_detect_locale_uri</span> = <span class="php-keyword1">true</span>;
 </span><span id="122" class="l"><a href="#122">122: </a>            }
 </span><span id="123" class="l"><a href="#123">123: </a>
-</span><span id="124" class="l"><a href="#124">124: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$ConfigDb</span>-&gt;get(<span class="php-quote">'site_lang_uri_default_visible'</span>, <span class="php-quote">'1'</span>) == <span class="php-quote">'1'</span>) {
+</span><span id="124" class="l"><a href="#124">124: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$ConfigDb</span>-&gt;get(<span class="php-quote">'site_lang_url_default_visible'</span>, <span class="php-quote">'1'</span>) == <span class="php-quote">'1'</span>) {
 </span><span id="125" class="l"><a href="#125">125: </a>                <span class="php-comment">// if config is set to force showing default language locale URI.</span>
 </span><span id="126" class="l"><a href="#126">126: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$locale_uri_mismatch</span>) &amp;&amp; <span class="php-var">$locale_uri_mismatch</span> === <span class="php-keyword1">true</span>) {
 </span><span id="127" class="l"><a href="#127">127: </a>                    <span class="php-comment">// if detect language locale URI is not exists in languages data or not enabled.</span>
-</span><span id="128" class="l"><a href="#128">128: </a>                    <span class="php-comment">// redirect to correct URI.</span>
+</span><span id="128" class="l"><a href="#128">128: </a>                    <span class="php-comment">// redirect to correct URL.</span>
 </span><span id="129" class="l"><a href="#129">129: </a>                    <span class="php-var">$uris_arr</span>[<span class="php-num">0</span>] = <span class="php-var">$language_locale_uri</span>;
 </span><span id="130" class="l"><a href="#130">130: </a>                    <span class="php-var">$uri</span> = <span class="php-var">$uri</span>-&gt;withPath(<span class="php-keyword2">implode</span>(<span class="php-quote">'/'</span>, <span class="php-var">$uris_arr</span>));
 </span><span id="131" class="l"><a href="#131">131: </a>                    <span class="php-var">$request</span> = <span class="php-var">$request</span>-&gt;withUri(<span class="php-var">$uri</span>);
@@ -468,6 +475,6 @@
 </div>
 </div>
 <script src="resources/combined.js?f4e2bad254b049a90cec234b4c706e522afe19cc"></script>
-<script src="elementlist.js?6251bc76567953359a54259d5d1f62439e3ccc2d"></script>
+<script src="elementlist.js?8582ff01a7fe2e652b3d4cc631943bb461f7e0fb"></script>
 </body>
 </html>
