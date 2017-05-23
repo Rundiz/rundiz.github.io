@@ -85,6 +85,11 @@
 						</li>
 							</ul></li>
 				<li>
+					<a href="namespace-System.Interfaces.html">
+						Interfaces					</a>
+
+						</li>
+				<li>
 					<a href="namespace-System.Libraries.html">
 						Libraries<span></span>
 					</a>
@@ -134,11 +139,11 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Modules.Home.ConsoleInstaller.html">Modules\Home\ConsoleInstaller</a></li>
 				<li><a href="class-Modules.Home.Controllers.IndexController.html">Modules\Home\Controllers\IndexController</a></li>
-				<li><a href="class-Modules.Languages.ConsoleInstaller.html">Modules\Languages\ConsoleInstaller</a></li>
+				<li><a href="class-Modules.Home.Installer.html">Modules\Home\Installer</a></li>
 				<li><a href="class-Modules.Languages.Controllers.GetLanguagesController.html">Modules\Languages\Controllers\GetLanguagesController</a></li>
 				<li><a href="class-Modules.Languages.Controllers.SetLanguageController.html">Modules\Languages\Controllers\SetLanguageController</a></li>
+				<li><a href="class-Modules.Languages.Installer.html">Modules\Languages\Installer</a></li>
 				<li><a href="class-System.App.html">System\App</a></li>
 				<li><a href="class-System.CliApp.html">System\CliApp</a></li>
 				<li><a href="class-System.Core.Console.BaseConsole.html">System\Core\Console\BaseConsole</a></li>
@@ -178,7 +183,7 @@
 
 			<h3>Interfaces</h3>
 			<ul>
-				<li><a href="class-System.Core.Console.ConsoleInstaller.html">System\Core\Console\ConsoleInstaller</a></li>
+				<li><a href="class-System.Interfaces.ModuleInstaller.html">System\Interfaces\ModuleInstaller</a></li>
 			</ul>
 
 			<h3>Traits</h3>
@@ -303,7 +308,7 @@
 </span><span id="73" class="l"><a href="#73"> 73: </a>                <span class="php-var">$io</span>-&gt;caution(<span class="php-quote">'No subfolder option specified.'</span>);
 </span><span id="74" class="l"><a href="#74"> 74: </a>            } <span class="php-keyword1">else</span> {
 </span><span id="75" class="l"><a href="#75"> 75: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$input</span>-&gt;getOption(<span class="php-quote">'subfolder'</span>), <span class="php-quote">'/'</span>) !== <span class="php-keyword1">false</span>) {
-</span><span id="76" class="l"><a href="#76"> 76: </a>                    <span class="php-var">$subfolder</span> = <span class="php-keyword2">str_replace</span>([<span class="php-quote">'../'</span>, <span class="php-quote">'..'</span>], <span class="php-quote">''</span>, <span class="php-var">$input</span>-&gt;getOption(<span class="php-quote">'subfolder'</span>));
+</span><span id="76" class="l"><a href="#76"> 76: </a>                    <span class="php-var">$subfolder</span> = <span class="php-keyword2">str_replace</span>([<span class="php-quote">'../'</span>, <span class="php-quote">'..\\'</span>, <span class="php-quote">'..'</span>], <span class="php-quote">''</span>, <span class="php-var">$input</span>-&gt;getOption(<span class="php-quote">'subfolder'</span>));
 </span><span id="77" class="l"><a href="#77"> 77: </a>                    <span class="php-var">$filesArray</span> = <span class="php-keyword2">glob</span>(STORAGE_PATH.DIRECTORY_SEPARATOR.<span class="php-var">$subfolder</span>, GLOB_NOSORT);
 </span><span id="78" class="l"><a href="#78"> 78: </a>                    <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$filesArray</span>) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$filesArray</span>)) {
 </span><span id="79" class="l"><a href="#79"> 79: </a>                        <span class="php-var">$count</span> = <span class="php-num">0</span>;
@@ -362,6 +367,6 @@
 </div>
 </div>
 <script src="resources/combined.js?f4e2bad254b049a90cec234b4c706e522afe19cc"></script>
-<script src="elementlist.js?8582ff01a7fe2e652b3d4cc631943bb461f7e0fb"></script>
+<script src="elementlist.js?07b6799dd655a4406b8d4282a17f8c968a6b496e"></script>
 </body>
 </html>
