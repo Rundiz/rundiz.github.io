@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li class="active">
 					<a href="namespace-System.html">
@@ -140,8 +174,10 @@
 			<ul>
 				<li><a href="class-System.Libraries.Assets.html">Assets</a></li>
 				<li><a href="class-System.Libraries.Autoload.html">Autoload</a></li>
+				<li><a href="class-System.Libraries.Cache.html">Cache</a></li>
 				<li><a href="class-System.Libraries.Config.html">Config</a></li>
 				<li><a href="class-System.Libraries.FileSystem.html">FileSystem</a></li>
+				<li><a href="class-System.Libraries.Input.html">Input</a></li>
 				<li class="active"><a href="class-System.Libraries.Languages.html">Languages</a></li>
 				<li><a href="class-System.Libraries.Log.html">Log</a></li>
 				<li><a href="class-System.Libraries.Modules.html">Modules</a></li>
@@ -241,7 +277,7 @@ Do not need to initialize the class and just use <code>$this-&gt;Languages</code
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-System.Libraries.Languages.html#12-200" title="Go to source code">System/Libraries/Languages.php</a>
+			<b>Located at</b> <a href="source-class-System.Libraries.Languages.html#12-262" title="Go to source code">System/Libraries/Languages.php</a>
 		<br>
 	</div>
 
@@ -261,7 +297,7 @@ Do not need to initialize the class and just use <code>$this-&gt;Languages</code
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-System.Libraries.Languages.html#74-83" title="Go to source code">__construct</a>( <span>string <var>$language_locale_uri</var></span> )</code>
+		<code><a href="source-class-System.Libraries.Languages.html#74-93" title="Go to source code">__construct</a>( <span>string|null <var>$languageLocaleUri</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>The class constructor.</p>
@@ -273,11 +309,16 @@ Do not need to initialize the class and just use <code>$this-&gt;Languages</code
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$language_locale_uri</var></dt>
-					<dd>The language locale URI.</dd>
+					<dt><var>$languageLocaleUri</var></dt>
+					<dd><p>The language locale URI. Leave this to null for auto detect current language.
+The language locale URI can get from <code>$_SERVER['RUNDIZSTRUCT_LANGUAGE']</code> super global var which were added when the app start.</p></dd>
 				</dl></div>
 
 
+				<h4>Throws</h4>
+				<div class="list">
+					InvalidArgumentException
+				</div>
 
 
 
@@ -296,7 +337,7 @@ Do not need to initialize the class and just use <code>$this-&gt;Languages</code
 
 		<td class="name"><div>
 		<a class="anchor" href="#___">#</a>
-		<code><a href="source-class-System.Libraries.Languages.html#86-92" title="Go to source code">__</a>( <span> <var>$text</var></span>, <span> <var>$domain</var></span> )</code>
+		<code><a href="source-class-System.Libraries.Languages.html#96-102" title="Go to source code">__</a>( <span> <var>$text</var></span>, <span> <var>$domain</var></span> )</code>
 
 		<div class="description short">
 			
@@ -330,7 +371,7 @@ Do not need to initialize the class and just use <code>$this-&gt;Languages</code
 
 		<td class="name"><div>
 		<a class="anchor" href="#_bindTextDomain">#</a>
-		<code><a href="source-class-System.Libraries.Languages.html#95-140" title="Go to source code">bindTextDomain</a>( <span>string <var>$domain</var></span>, <span>string <var>$directory</var> = <span class="php-quote">''</span></span>, <span>string <var>$language_locale_uri</var> = <span class="php-quote">''</span></span> )</code>
+		<code><a href="source-class-System.Libraries.Languages.html#105-150" title="Go to source code">bindTextDomain</a>( <span>string <var>$domain</var></span>, <span>string <var>$directory</var> = <span class="php-quote">''</span></span>, <span>string <var>$languageLocaleUri</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			<p>Bind text domain file.<br>
@@ -348,7 +389,7 @@ Load the translations file to get ready to use.</p>
 					<dd>$directory The folder that contain translations (mo file).</dd>
 					<dt><var>$directory</var></dt>
 					<dd>$domain The text domain with out language locale URI and .mo extension.</dd>
-					<dt><var>$language_locale_uri</var></dt>
+					<dt><var>$languageLocaleUri</var></dt>
 					<dd>The language locale URI.</dd>
 				</dl></div>
 
@@ -375,7 +416,7 @@ Load the translations file to get ready to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getInstance">#</a>
-		<code><a href="source-class-System.Libraries.Languages.html#143-155" title="Go to source code">getInstance</a>( )</code>
+		<code><a href="source-class-System.Libraries.Languages.html#153-165" title="Go to source code">getInstance</a>( )</code>
 
 		<div class="description short">
 			<p>Get translator class instance.</p>
@@ -411,7 +452,7 @@ Load the translations file to get ready to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_gettext">#</a>
-		<code><a href="source-class-System.Libraries.Languages.html#158-179" title="Go to source code">gettext</a>( <span>string <var>$text</var></span>, <span>string <var>$domain</var> = <span class="php-quote">'messages'</span></span> )</code>
+		<code><a href="source-class-System.Libraries.Languages.html#168-197" title="Go to source code">gettext</a>( <span>string <var>$text</var></span>, <span>string <var>$domain</var> = <span class="php-quote">'messages'</span></span> )</code>
 
 		<div class="description short">
 			<p>Get the translated text.</p>
@@ -440,6 +481,71 @@ Load the translations file to get ready to use.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="gettextEscape" id="_gettextEscape">
+
+		<td class="attributes"><code>
+			 public static
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_gettextEscape">#</a>
+		<code><a href="source-class-System.Libraries.Languages.html#200-241" title="Go to source code">gettextEscape</a>( <span>string <var>$text</var></span>, <span>string <var>$domain</var> = <span class="php-quote">'messages'</span></span>, <span>integer <var>$flags</var> = ENT_QUOTES</span>, <span>string <var>$encoding</var> = <span class="php-quote">'UTF-8'</span></span>, <span>boolean <var>$doubleEncode</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Get the translated text and escape HTML.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the translated text and escape HTML.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$text</var></dt>
+					<dd>The text message.</dd>
+					<dt><var>$domain</var></dt>
+					<dd>The domain that was loaded.</dd>
+					<dt><var>$flags</var></dt>
+					<dd><p>ENT_COMPAT Will convert double-quotes and leave single-quotes alone.<br>
+                             ENT_QUOTES Will convert both double and single quotes.<br>
+                             ENT_NOQUOTES Will leave both double and single quotes unconverted.<br>
+                             ENT_IGNORE Silently discard invalid code unit sequences instead of returning an empty string. Using this flag is discouraged as it » may have security implications.<br>
+                             ENT_SUBSTITUTE Replace invalid code unit sequences with a Unicode Replacement Character U+FFFD (UTF-8) or &#xFFFD; (otherwise) instead of returning an empty string.<br>
+                             ENT_DISALLOWED Replace invalid code points for the given document type with a Unicode Replacement Character U+FFFD (UTF-8) or &#xFFFD; (otherwise) instead of leaving them as is. This may be useful, for instance, to ensure the well-formedness of XML documents with embedded external content.<br>
+                             ENT_HTML401 Handle code as HTML 4.01.<br>
+                             ENT_XML1 Handle code as XML 1.<br>
+                             ENT_XHTML Handle code as XHTML.<br>
+                             ENT_HTML5 Handle code as HTML 5.<br>
+                             Default is ENT_QUOTES (yes, it is different from PHP's default).</p></dd>
+					<dt><var>$encoding</var></dt>
+					<dd>The character encoding. Default is UTF-8.</dd>
+					<dt><var>$doubleEncode</var></dt>
+					<dd>When double_encode is turned off PHP will not encode existing html entities, the default is to convert everything.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Return translated text (if found).
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					InvalidArgumentException
+				</div>
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://php.net/manual/en/function.htmlspecialchars.php">See more about $flags, $encoding, $doubleEncode argument which is using from `htmlspecialchars()` function.</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="registerTextDomain" id="_registerTextDomain">
 
 		<td class="attributes"><code>
@@ -452,7 +558,7 @@ Load the translations file to get ready to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_registerTextDomain">#</a>
-		<code><a href="source-class-System.Libraries.Languages.html#182-197" title="Go to source code">registerTextDomain</a>( <span>string <var>$domain</var></span>, <span>string <var>$directory</var></span> )</code>
+		<code><a href="source-class-System.Libraries.Languages.html#244-259" title="Go to source code">registerTextDomain</a>( <span>string <var>$domain</var></span>, <span>string <var>$directory</var></span> )</code>
 
 		<div class="description short">
 			<p>Register text domain.</p>
@@ -492,14 +598,14 @@ Load the translations file to get ready to use.</p>
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="current_text_domain" id="$current_text_domain">
+	<tr data-order="currentTextDomain" id="$currentTextDomain">
 		<td class="attributes"><code>
 			protected  
 			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Languages.html#44-47" title="Go to source code"><var>$current_text_domain</var></a>
+				<a href="source-class-System.Libraries.Languages.html#44-47" title="Go to source code"><var>$currentTextDomain</var></a>
 
 			<div class="description short">
 				<p>Currently loaded text domain.</p>
@@ -512,19 +618,19 @@ Load the translations file to get ready to use.</p>
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$current_text_domain" class="anchor">#</a>
+				<a href="#$currentTextDomain" class="anchor">#</a>
 				<code></code>
 			</div>
 		</td>
 	</tr>
-	<tr data-order="language_locale_uri" id="$language_locale_uri">
+	<tr data-order="languageLocaleUri" id="$languageLocaleUri">
 		<td class="attributes"><code>
 			protected  
 			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Languages.html#50-53" title="Go to source code"><var>$language_locale_uri</var></a>
+				<a href="source-class-System.Libraries.Languages.html#50-53" title="Go to source code"><var>$languageLocaleUri</var></a>
 
 			<div class="description short">
 				<p>The language locale URI.</p>
@@ -537,19 +643,19 @@ Load the translations file to get ready to use.</p>
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$language_locale_uri" class="anchor">#</a>
+				<a href="#$languageLocaleUri" class="anchor">#</a>
 				<code></code>
 			</div>
 		</td>
 	</tr>
-	<tr data-order="registered_text_domains" id="$registered_text_domains">
+	<tr data-order="registeredTextDomains" id="$registeredTextDomains">
 		<td class="attributes"><code>
 			protected  
 			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Languages.html#56-59" title="Go to source code"><var>$registered_text_domains</var></a>
+				<a href="source-class-System.Libraries.Languages.html#56-59" title="Go to source code"><var>$registeredTextDomains</var></a>
 
 			<div class="description short">
 				<p>The text domains that was registered via registerTextDomain() method.</p>
@@ -562,7 +668,7 @@ Load the translations file to get ready to use.</p>
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$registered_text_domains" class="anchor">#</a>
+				<a href="#$registeredTextDomains" class="anchor">#</a>
 				<code>[]</code>
 			</div>
 		</td>

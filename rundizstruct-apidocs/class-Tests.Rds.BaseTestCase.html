@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li>
 					<a href="namespace-System.html">
@@ -209,8 +243,13 @@ PHPUnit\Framework\TestCase
 
 	<div>
 		<h4>Direct known subclasses</h4>
+			<a href="class-Modules.RdsAdmin.Tests.CryptoTest.html">Modules\RdsAdmin\Tests\CryptoTest</a>, 
+			<a href="class-Modules.RdsAdmin.Tests.StringTest.html">Modules\RdsAdmin\Tests\StringTest</a>, 
 			<a href="class-Tests.Rds.HomeTest.html">Tests\Rds\HomeTest</a>, 
-			<a href="class-Tests.Rds.Libraries.AssetsTest.html">Tests\Rds\Libraries\AssetsTest</a>
+			<a href="class-Tests.Rds.Libraries.AssetsTest.html">Tests\Rds\Libraries\AssetsTest</a>, 
+			<a href="class-Tests.Rds.Libraries.DbTest.html">Tests\Rds\Libraries\DbTest</a>, 
+			<a href="class-Tests.Rds.Libraries.FileSystemTest.html">Tests\Rds\Libraries\FileSystemTest</a>, 
+			<a href="class-Tests.Rds.Libraries.InputTest.html">Tests\Rds\Libraries\InputTest</a>
 	</div>
 
 
@@ -224,7 +263,7 @@ PHPUnit\Framework\TestCase
 		<b>Namespace:</b> <a href="namespace-Tests.html">Tests</a>\<a href="namespace-Tests.Rds.html">Rds</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Tests.Rds.BaseTestCase.html#6-59" title="Go to source code">Tests/Rds/BaseTestCase.php</a>
+			<b>Located at</b> <a href="source-class-Tests.Rds.BaseTestCase.html#6-100" title="Go to source code">Tests/Rds/BaseTestCase.php</a>
 		<br>
 	</div>
 
@@ -244,7 +283,7 @@ PHPUnit\Framework\TestCase
 
 		<td class="name"><div>
 		<a class="anchor" href="#_runApp">#</a>
-		<code><a href="source-class-Tests.Rds.BaseTestCase.html#16-56" title="Go to source code">runApp</a>( <span>string <var>$method</var></span>, <span>string <var>$url</var></span> )</code>
+		<code><a href="source-class-Tests.Rds.BaseTestCase.html#16-97" title="Go to source code">runApp</a>( <span>string <var>$method</var></span>, <span>string <var>$url</var></span>, <span>array <var>$cookies</var> = []</span>, <span>array <var>$data</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Create environment to the application to have request URL, query string, request method.</p>
@@ -260,6 +299,10 @@ PHPUnit\Framework\TestCase
 					<dd>The request method.</dd>
 					<dt><var>$url</var></dt>
 					<dd>Path to request.</dd>
+					<dt><var>$cookies</var></dt>
+					<dd>Cookies collection.</dd>
+					<dt><var>$data</var></dt>
+					<dd>The request data for method post/put/etc...</dd>
 				</dl></div>
 
 				<h4>Returns</h4>

@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li class="active">
 					<a href="namespace-System.html">
@@ -140,8 +174,10 @@
 			<ul>
 				<li><a href="class-System.Libraries.Assets.html">Assets</a></li>
 				<li><a href="class-System.Libraries.Autoload.html">Autoload</a></li>
+				<li><a href="class-System.Libraries.Cache.html">Cache</a></li>
 				<li class="active"><a href="class-System.Libraries.Config.html">Config</a></li>
 				<li><a href="class-System.Libraries.FileSystem.html">FileSystem</a></li>
+				<li><a href="class-System.Libraries.Input.html">Input</a></li>
 				<li><a href="class-System.Libraries.Languages.html">Languages</a></li>
 				<li><a href="class-System.Libraries.Log.html">Log</a></li>
 				<li><a href="class-System.Libraries.Modules.html">Modules</a></li>
@@ -242,7 +278,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get">#</a>
-		<code><a href="source-class-System.Libraries.Config.html#35-60" title="Go to source code">get</a>( <span>string <var>$config_key</var></span>, <span>string <var>$file</var></span>, <span>string <var>$default</var> = <span class="php-quote">''</span></span> )</code>
+		<code><a href="source-class-System.Libraries.Config.html#35-60" title="Go to source code">get</a>( <span>string <var>$configKey</var></span>, <span>string <var>$file</var></span>, <span>string <var>$default</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			<p>Get the config value from specified name.</p>
@@ -254,7 +290,7 @@
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$config_key</var></dt>
+					<dt><var>$configKey</var></dt>
 					<dd>The config name. this can set to ALL to get all the config values.</dd>
 					<dt><var>$file</var></dt>
 					<dd>Config file name that were loaded. this is without extension.</dd>
@@ -324,7 +360,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_set">#</a>
-		<code><a href="source-class-System.Libraries.Config.html#123-143" title="Go to source code">set</a>( <span>string <var>$file</var></span>, <span>string <var>$config_key</var></span>, <span>mixed <var>$config_value</var></span> )</code>
+		<code><a href="source-class-System.Libraries.Config.html#123-143" title="Go to source code">set</a>( <span>string <var>$file</var></span>, <span>string <var>$configKey</var></span>, <span>mixed <var>$configValue</var></span> )</code>
 
 		<div class="description short">
 			<p>Set config name (key) and value. Warning! this will not write to the config file.</p>
@@ -338,9 +374,9 @@
 				<div class="list"><dl>
 					<dt><var>$file</var></dt>
 					<dd>Config file name only, no extension. Case sensitive.</dd>
-					<dt><var>$config_key</var></dt>
+					<dt><var>$configKey</var></dt>
 					<dd>Config name.</dd>
-					<dt><var>$config_value</var></dt>
+					<dt><var>$configValue</var></dt>
 					<dd>Config value.</dd>
 				</dl></div>
 
@@ -366,14 +402,14 @@
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="loaded_file" id="$loaded_file">
+	<tr data-order="loadedFile" id="$loadedFile">
 		<td class="attributes"><code>
 			protected  
 			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Config.html#23-26" title="Go to source code"><var>$loaded_file</var></a>
+				<a href="source-class-System.Libraries.Config.html#23-26" title="Go to source code"><var>$loadedFile</var></a>
 
 			<div class="description short">
 				<p>Contain loaded files and config keys, values as array.</p>
@@ -386,19 +422,19 @@
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$loaded_file" class="anchor">#</a>
+				<a href="#$loadedFile" class="anchor">#</a>
 				<code>[]</code>
 			</div>
 		</td>
 	</tr>
-	<tr data-order="trace_loaded_files" id="$trace_loaded_files">
+	<tr data-order="traceLoadedFiles" id="$traceLoadedFiles">
 		<td class="attributes"><code>
 			public  
 			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Config.html#29-32" title="Go to source code"><var>$trace_loaded_files</var></a>
+				<a href="source-class-System.Libraries.Config.html#29-32" title="Go to source code"><var>$traceLoadedFiles</var></a>
 
 			<div class="description short">
 				<p>Contain loaded files for use in debug.</p>
@@ -411,7 +447,7 @@
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$trace_loaded_files" class="anchor">#</a>
+				<a href="#$traceLoadedFiles" class="anchor">#</a>
 				<code>[]</code>
 			</div>
 		</td>

@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li class="active">
 					<a href="namespace-System.html">
@@ -201,7 +235,8 @@
 	<div>
 		<h4>Direct known implementers</h4>
 			<a href="class-Modules.Home.Installer.html">Modules\Home\Installer</a>, 
-			<a href="class-Modules.Languages.Installer.html">Modules\Languages\Installer</a>
+			<a href="class-Modules.Languages.Installer.html">Modules\Languages\Installer</a>, 
+			<a href="class-Modules.RdsAdmin.Installer.html">Modules\RdsAdmin\Installer</a>
 	</div>
 
 
@@ -215,7 +250,7 @@
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-System.Interfaces.ModuleInstaller.html#12-71" title="Go to source code">System/Interfaces/ModuleInstaller.php</a>
+			<b>Located at</b> <a href="source-class-System.Interfaces.ModuleInstaller.html#12-122" title="Go to source code">System/Interfaces/ModuleInstaller.php</a>
 		<br>
 	</div>
 
@@ -248,7 +283,7 @@
 The required array key for each route are <code>route_core</code>, <code>route_order</code>.<br>
 For a route group, it is required <code>route_group</code> array key and its value is array.<br>
 For a normal route, it is required <code>route_method</code>, <code>route_map_method</code>, <code>route_uri</code>, <code>route_controller</code>, <code>route_name</code>.<br>
-If <code>route_method</code> is map then <code>route_map_method</code> is required and its value is array. The <code>route_name</code> is optional.<br>
+If <code>route_method</code> is map then <code>route_map_method</code> is required and its value is array. The <code>route_name</code> is optional but should be unique and have your module name prefix.<br>
 For more information about route keys please read in the <code>routes</code> table in the database.</p>
 
 <p>Example:</p>
@@ -289,9 +324,150 @@ For more information about route keys please read in the <code>routes</code> tab
 
 				<h4>Returns</h4>
 				<div class="list">
-					array<br>Return the array of routes.
+					array<br>Return the array of routes, if no routes then return empty array.
 				</div>
 
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="install" id="_install">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_install">#</a>
+		<code><a href="source-class-System.Interfaces.ModuleInstaller.html#71-85" title="Go to source code">install</a>( <span><code><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></code> <var>$Db</var></span> )</code>
+
+		<div class="description short">
+			<p>Install a module.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Install a module.</p>
+
+<p>This method will be call on install or add a module.<br>
+If your module contain some thing to work on install such as create table in database, you can use that command here.<br>
+If your module has nothing to work on install, you can create this method and leave it empty.</p>
+
+<p>Do not insert any routes using this method! Use <code>getRoutes()</code> method instead.</p>
+
+<p>Any installation script here if they failed, it should throw the errors to make a notice that installation was failed.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Db</var></dt>
+					<dd>The database class.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception<br>Throw the exception error in something failed.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="uninstall" id="_uninstall">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_uninstall">#</a>
+		<code><a href="source-class-System.Interfaces.ModuleInstaller.html#88-102" title="Go to source code">uninstall</a>( <span><code><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></code> <var>$Db</var></span> )</code>
+
+		<div class="description short">
+			<p>Uninstall a module.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Uninstall a module.</p>
+
+<p>This method will be call on uninstall or remove a module.<br>
+If your module contain some thing to work on uninstall such as remove table in database, you can use that command here.<br>
+If your module has nothing to work on uninstall, you can create this method and leave it empty.</p>
+
+<p>Do not remove any routes using this method! It will be remove automatically.</p>
+
+<p>Any uninstallation script here if they failed, it should throw the errors to make a notice that uninstallation was failed.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Db</var></dt>
+					<dd>The database class.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception<br>Throw the exception error in something failed.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="_update">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update">#</a>
+		<code><a href="source-class-System.Interfaces.ModuleInstaller.html#105-119" title="Go to source code">update</a>( <span><code><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></code> <var>$Db</var></span> )</code>
+
+		<div class="description short">
+			<p>Update a module.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Update a module.</p>
+
+<p>This method will be call on update a module.<br>
+If your module contain something to work on update such as migration, update the database, you can use that command here.<br>
+If your module has nothing to work on update, you can create this method and leave it empty.</p>
+
+<p>Do not update any routes using this method! Use <code>getRoutes()</code> method instead.</p>
+
+<p>Any update script here if they failed, it should throw the errors to make a notice that update was failed.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Db</var></dt>
+					<dd>The database class.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception<br>Throw the exception error in something failed.
+				</div>
 
 
 

@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li class="active">
 					<a href="namespace-System.html">
@@ -203,23 +237,30 @@
 			<a href="class-Modules.Home.Controllers.IndexController.html">Modules\Home\Controllers\IndexController</a>, 
 			<a href="class-Modules.Languages.Controllers.GetLanguagesController.html">Modules\Languages\Controllers\GetLanguagesController</a>, 
 			<a href="class-Modules.Languages.Controllers.SetLanguageController.html">Modules\Languages\Controllers\SetLanguageController</a>, 
+			<a href="class-Modules.RdsAdmin.Controllers.Admin.LoginController.html">Modules\RdsAdmin\Controllers\Admin\LoginController</a>, 
+			<a href="class-Modules.RdsAdmin.Controllers.Admin.LogoutController.html">Modules\RdsAdmin\Controllers\Admin\LogoutController</a>, 
 			<a href="class-System.Core.Controllers.AdminBaseController.html">System\Core\Controllers\AdminBaseController</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-Modules.RdsAdmin.Controllers.Admin.AdminBaseController.html">Modules\RdsAdmin\Controllers\Admin\AdminBaseController</a>, 
+			<a href="class-Modules.RdsAdmin.Controllers.Admin.IndexController.html">Modules\RdsAdmin\Controllers\Admin\IndexController</a>
 	</div>
 
 
 
 
 
-
 	<div class="info">
-		
+		<b>Abstract</b><br>
 		
 		<b>Namespace:</b> <a href="namespace-System.html">System</a>\<a href="namespace-System.Core.html">Core</a>\<a href="namespace-System.Core.Controllers.html">Controllers</a><br>
 		
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-System.Core.Controllers.BaseController.html#16-111" title="Go to source code">System/Core/Controllers/BaseController.php</a>
+			<b>Located at</b> <a href="source-class-System.Core.Controllers.BaseController.html#16-91" title="Go to source code">System/Core/Controllers/BaseController.php</a>
 		<br>
 	</div>
 
@@ -239,7 +280,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-System.Core.Controllers.BaseController.html#72-108" title="Go to source code">__construct</a>( <span>Interop\Container\ContainerInterface <var>$CI</var></span> )</code>
+		<code><a href="source-class-System.Core.Controllers.BaseController.html#61-88" title="Go to source code">__construct</a>( <span>Interop\Container\ContainerInterface <var>$CI</var></span> )</code>
 
 		<div class="description short">
 			<p>The base controller.<br>
@@ -306,6 +347,31 @@ The admin base controller also extends this base controller too.</p>
 			</div>
 		</td>
 	</tr>
+	<tr data-order="data" id="$data">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-System.Core.Controllers.BaseController.html#31-34" title="Go to source code"><var>$data</var></a>
+
+			<div class="description short">
+				<p>The array data for template or views file. This is for allow base controller set common data to use in many pages such as generate CSRF token &amp; more.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>The array data for template or views file. This is for allow base controller set common data to use in many pages such as generate CSRF token &amp; more.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$data" class="anchor">#</a>
+				<code>[]</code>
+			</div>
+		</td>
+	</tr>
 	<tr data-order="Db" id="$Db">
 		<td class="attributes"><code>
 			protected  
@@ -313,7 +379,7 @@ The admin base controller also extends this base controller too.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Core.Controllers.BaseController.html#30-33" title="Go to source code"><var>$Db</var></a>
+				<a href="source-class-System.Core.Controllers.BaseController.html#37-40" title="Go to source code"><var>$Db</var></a>
 
 			<div class="description short">
 				<p>DB class object.</p>
@@ -331,56 +397,6 @@ The admin base controller also extends this base controller too.</p>
 			</div>
 		</td>
 	</tr>
-	<tr data-order="language" id="$language">
-		<td class="attributes"><code>
-			protected  
-			array
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-System.Core.Controllers.BaseController.html#36-39" title="Go to source code"><var>$language</var></a>
-
-			<div class="description short">
-				<p>The language fields in languages table.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The language fields in languages table.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$language" class="anchor">#</a>
-				<code>[]</code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="Languages" id="$Languages">
-		<td class="attributes"><code>
-			protected  
-			<code><a href="class-System.Libraries.Languages.html">System\Libraries\Languages</a></code>
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-System.Core.Controllers.BaseController.html#42-45" title="Go to source code"><var>$Languages</var></a>
-
-			<div class="description short">
-				<p>The Languages class.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The Languages class.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$Languages" class="anchor">#</a>
-				<code></code>
-			</div>
-		</td>
-	</tr>
 	<tr data-order="Modules" id="$Modules">
 		<td class="attributes"><code>
 			protected  
@@ -388,7 +404,7 @@ The admin base controller also extends this base controller too.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Core.Controllers.BaseController.html#48-51" title="Go to source code"><var>$Modules</var></a>
+				<a href="source-class-System.Core.Controllers.BaseController.html#43-46" title="Go to source code"><var>$Modules</var></a>
 
 			<div class="description short">
 				<p>The Modules class.</p>
@@ -406,31 +422,6 @@ The admin base controller also extends this base controller too.</p>
 			</div>
 		</td>
 	</tr>
-	<tr data-order="Profiler" id="$Profiler">
-		<td class="attributes"><code>
-			protected  
-			Rundiz\Profiler\Profiler
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-System.Core.Controllers.BaseController.html#54-57" title="Go to source code"><var>$Profiler</var></a>
-
-			<div class="description short">
-				<p>The profiler class. To use this, check it with not null condition first.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The profiler class. To use this, check it with not null condition first.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$Profiler" class="anchor">#</a>
-				<code></code>
-			</div>
-		</td>
-	</tr>
 	<tr data-order="SlimApp" id="$SlimApp">
 		<td class="attributes"><code>
 			protected  
@@ -438,7 +429,7 @@ The admin base controller also extends this base controller too.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Core.Controllers.BaseController.html#60-63" title="Go to source code"><var>$SlimApp</var></a>
+				<a href="source-class-System.Core.Controllers.BaseController.html#49-52" title="Go to source code"><var>$SlimApp</var></a>
 
 			<div class="description short">
 				<p>The Slim app class.</p>
@@ -463,7 +454,7 @@ The admin base controller also extends this base controller too.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Core.Controllers.BaseController.html#66-69" title="Go to source code"><var>$Themes</var></a>
+				<a href="source-class-System.Core.Controllers.BaseController.html#55-58" title="Go to source code"><var>$Themes</var></a>
 
 			<div class="description short">
 				<p>The themes class.</p>

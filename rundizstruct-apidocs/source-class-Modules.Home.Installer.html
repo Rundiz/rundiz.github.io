@@ -48,6 +48,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li>
 					<a href="namespace-System.html">
@@ -144,6 +178,17 @@
 				<li><a href="class-Modules.Languages.Controllers.GetLanguagesController.html">Modules\Languages\Controllers\GetLanguagesController</a></li>
 				<li><a href="class-Modules.Languages.Controllers.SetLanguageController.html">Modules\Languages\Controllers\SetLanguageController</a></li>
 				<li><a href="class-Modules.Languages.Installer.html">Modules\Languages\Installer</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.AdminBaseController.html">Modules\RdsAdmin\Controllers\Admin\AdminBaseController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.IndexController.html">Modules\RdsAdmin\Controllers\Admin\IndexController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.LoginController.html">Modules\RdsAdmin\Controllers\Admin\LoginController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.LogoutController.html">Modules\RdsAdmin\Controllers\Admin\LogoutController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Installer.html">Modules\RdsAdmin\Installer</a></li>
+				<li><a href="class-Modules.RdsAdmin.Libraries.Crypto.html">Modules\RdsAdmin\Libraries\Crypto</a></li>
+				<li><a href="class-Modules.RdsAdmin.Libraries.String.html">Modules\RdsAdmin\Libraries\String</a></li>
+				<li><a href="class-Modules.RdsAdmin.Models.UserLoginsDb.html">Modules\RdsAdmin\Models\UserLoginsDb</a></li>
+				<li><a href="class-Modules.RdsAdmin.Models.UsersDb.html">Modules\RdsAdmin\Models\UsersDb</a></li>
+				<li><a href="class-Modules.RdsAdmin.Tests.CryptoTest.html">Modules\RdsAdmin\Tests\CryptoTest</a></li>
+				<li><a href="class-Modules.RdsAdmin.Tests.StringTest.html">Modules\RdsAdmin\Tests\StringTest</a></li>
 				<li><a href="class-System.App.html">System\App</a></li>
 				<li><a href="class-System.CliApp.html">System\CliApp</a></li>
 				<li><a href="class-System.Core.Console.BaseConsole.html">System\Core\Console\BaseConsole</a></li>
@@ -162,11 +207,13 @@
 				<li><a href="class-System.Core.Models.ThemesDb.html">System\Core\Models\ThemesDb</a></li>
 				<li><a href="class-System.Libraries.Assets.html">System\Libraries\Assets</a></li>
 				<li><a href="class-System.Libraries.Autoload.html">System\Libraries\Autoload</a></li>
+				<li><a href="class-System.Libraries.Cache.html">System\Libraries\Cache</a></li>
 				<li><a href="class-System.Libraries.Config.html">System\Libraries\Config</a></li>
 				<li><a href="class-System.Libraries.Db.Bootstrap.html">System\Libraries\Db\Bootstrap</a></li>
 				<li><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></li>
 				<li><a href="class-System.Libraries.Db.Logger.html">System\Libraries\Db\Logger</a></li>
 				<li><a href="class-System.Libraries.FileSystem.html">System\Libraries\FileSystem</a></li>
+				<li><a href="class-System.Libraries.Input.html">System\Libraries\Input</a></li>
 				<li><a href="class-System.Libraries.Languages.html">System\Libraries\Languages</a></li>
 				<li><a href="class-System.Libraries.Log.html">System\Libraries\Log</a></li>
 				<li><a href="class-System.Libraries.Modules.html">System\Libraries\Modules</a></li>
@@ -179,6 +226,9 @@
 				<li><a href="class-Tests.Rds.BaseTestCase.html">Tests\Rds\BaseTestCase</a></li>
 				<li><a href="class-Tests.Rds.HomeTest.html">Tests\Rds\HomeTest</a></li>
 				<li><a href="class-Tests.Rds.Libraries.AssetsTest.html">Tests\Rds\Libraries\AssetsTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.DbTest.html">Tests\Rds\Libraries\DbTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.FileSystemTest.html">Tests\Rds\Libraries\FileSystemTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.InputTest.html">Tests\Rds\Libraries\InputTest</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -273,7 +323,34 @@
 </span><span id="38" class="l"><a href="#38">38: </a>    }<span class="php-comment">// getRoutes</span>
 </span><span id="39" class="l"><a href="#39">39: </a>
 </span><span id="40" class="l"><a href="#40">40: </a>
-</span><span id="41" class="l"><a href="#41">41: </a>}</span></code></pre>
+</span><span id="41" class="l"><a href="#41">41: </a>    <span class="php-comment">/**
+</span></span><span id="42" class="l"><a href="#42">42: </a><span class="php-comment">     * {@inheritDoc}
+</span></span><span id="43" class="l"><a href="#43">43: </a><span class="php-comment">     */</span>
+</span><span id="44" class="l"><a href="#44">44: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> install(\<span class="php-keyword2">System</span>\Libraries\Db\Db <span class="php-var">$Db</span>)
+</span><span id="45" class="l"><a href="#45">45: </a>    {
+</span><span id="46" class="l"><a href="#46">46: </a>        
+</span><span id="47" class="l"><a href="#47">47: </a>    }<span class="php-comment">// install</span>
+</span><span id="48" class="l"><a href="#48">48: </a>
+</span><span id="49" class="l"><a href="#49">49: </a>
+</span><span id="50" class="l"><a href="#50">50: </a>    <span class="php-comment">/**
+</span></span><span id="51" class="l"><a href="#51">51: </a><span class="php-comment">     * {@inheritDoc}
+</span></span><span id="52" class="l"><a href="#52">52: </a><span class="php-comment">     */</span>
+</span><span id="53" class="l"><a href="#53">53: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> uninstall(\<span class="php-keyword2">System</span>\Libraries\Db\Db <span class="php-var">$Db</span>)
+</span><span id="54" class="l"><a href="#54">54: </a>    {
+</span><span id="55" class="l"><a href="#55">55: </a>        
+</span><span id="56" class="l"><a href="#56">56: </a>    }<span class="php-comment">// uninstall</span>
+</span><span id="57" class="l"><a href="#57">57: </a>
+</span><span id="58" class="l"><a href="#58">58: </a>
+</span><span id="59" class="l"><a href="#59">59: </a>    <span class="php-comment">/**
+</span></span><span id="60" class="l"><a href="#60">60: </a><span class="php-comment">     * {@inheritDoc}
+</span></span><span id="61" class="l"><a href="#61">61: </a><span class="php-comment">     */</span>
+</span><span id="62" class="l"><a href="#62">62: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> update(\<span class="php-keyword2">System</span>\Libraries\Db\Db <span class="php-var">$Db</span>)
+</span><span id="63" class="l"><a href="#63">63: </a>    {
+</span><span id="64" class="l"><a href="#64">64: </a>        
+</span><span id="65" class="l"><a href="#65">65: </a>    }<span class="php-comment">// update</span>
+</span><span id="66" class="l"><a href="#66">66: </a>
+</span><span id="67" class="l"><a href="#67">67: </a>
+</span><span id="68" class="l"><a href="#68">68: </a>}</span></code></pre>
 
 	<div id="footer">
 		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
@@ -281,6 +358,6 @@
 </div>
 </div>
 <script src="resources/combined.js?f4e2bad254b049a90cec234b4c706e522afe19cc"></script>
-<script src="elementlist.js?07b6799dd655a4406b8d4282a17f8c968a6b496e"></script>
+<script src="elementlist.js?9344ef0605852b3a569c39889cdd7a580ba0eb46"></script>
 </body>
 </html>

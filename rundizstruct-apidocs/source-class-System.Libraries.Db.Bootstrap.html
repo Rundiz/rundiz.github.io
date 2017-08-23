@@ -48,6 +48,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li>
 					<a href="namespace-System.html">
@@ -144,6 +178,17 @@
 				<li><a href="class-Modules.Languages.Controllers.GetLanguagesController.html">Modules\Languages\Controllers\GetLanguagesController</a></li>
 				<li><a href="class-Modules.Languages.Controllers.SetLanguageController.html">Modules\Languages\Controllers\SetLanguageController</a></li>
 				<li><a href="class-Modules.Languages.Installer.html">Modules\Languages\Installer</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.AdminBaseController.html">Modules\RdsAdmin\Controllers\Admin\AdminBaseController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.IndexController.html">Modules\RdsAdmin\Controllers\Admin\IndexController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.LoginController.html">Modules\RdsAdmin\Controllers\Admin\LoginController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.LogoutController.html">Modules\RdsAdmin\Controllers\Admin\LogoutController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Installer.html">Modules\RdsAdmin\Installer</a></li>
+				<li><a href="class-Modules.RdsAdmin.Libraries.Crypto.html">Modules\RdsAdmin\Libraries\Crypto</a></li>
+				<li><a href="class-Modules.RdsAdmin.Libraries.String.html">Modules\RdsAdmin\Libraries\String</a></li>
+				<li><a href="class-Modules.RdsAdmin.Models.UserLoginsDb.html">Modules\RdsAdmin\Models\UserLoginsDb</a></li>
+				<li><a href="class-Modules.RdsAdmin.Models.UsersDb.html">Modules\RdsAdmin\Models\UsersDb</a></li>
+				<li><a href="class-Modules.RdsAdmin.Tests.CryptoTest.html">Modules\RdsAdmin\Tests\CryptoTest</a></li>
+				<li><a href="class-Modules.RdsAdmin.Tests.StringTest.html">Modules\RdsAdmin\Tests\StringTest</a></li>
 				<li><a href="class-System.App.html">System\App</a></li>
 				<li><a href="class-System.CliApp.html">System\CliApp</a></li>
 				<li><a href="class-System.Core.Console.BaseConsole.html">System\Core\Console\BaseConsole</a></li>
@@ -162,11 +207,13 @@
 				<li><a href="class-System.Core.Models.ThemesDb.html">System\Core\Models\ThemesDb</a></li>
 				<li><a href="class-System.Libraries.Assets.html">System\Libraries\Assets</a></li>
 				<li><a href="class-System.Libraries.Autoload.html">System\Libraries\Autoload</a></li>
+				<li><a href="class-System.Libraries.Cache.html">System\Libraries\Cache</a></li>
 				<li><a href="class-System.Libraries.Config.html">System\Libraries\Config</a></li>
 				<li><a href="class-System.Libraries.Db.Bootstrap.html">System\Libraries\Db\Bootstrap</a></li>
 				<li><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></li>
 				<li><a href="class-System.Libraries.Db.Logger.html">System\Libraries\Db\Logger</a></li>
 				<li><a href="class-System.Libraries.FileSystem.html">System\Libraries\FileSystem</a></li>
+				<li><a href="class-System.Libraries.Input.html">System\Libraries\Input</a></li>
 				<li><a href="class-System.Libraries.Languages.html">System\Libraries\Languages</a></li>
 				<li><a href="class-System.Libraries.Log.html">System\Libraries\Log</a></li>
 				<li><a href="class-System.Libraries.Modules.html">System\Libraries\Modules</a></li>
@@ -179,6 +226,9 @@
 				<li><a href="class-Tests.Rds.BaseTestCase.html">Tests\Rds\BaseTestCase</a></li>
 				<li><a href="class-Tests.Rds.HomeTest.html">Tests\Rds\HomeTest</a></li>
 				<li><a href="class-Tests.Rds.Libraries.AssetsTest.html">Tests\Rds\Libraries\AssetsTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.DbTest.html">Tests\Rds\Libraries\DbTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.FileSystemTest.html">Tests\Rds\Libraries\FileSystemTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.InputTest.html">Tests\Rds\Libraries\InputTest</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -267,35 +317,35 @@
 </span><span id="32" class="l"><a href="#32">32: </a>    <span class="php-comment">/**
 </span></span><span id="33" class="l"><a href="#33">33: </a><span class="php-comment">     * Class constructor
 </span></span><span id="34" class="l"><a href="#34">34: </a><span class="php-comment">     * 
-</span></span><span id="35" class="l"><a href="#35">35: </a><span class="php-comment">     * @param array $db_config Config keys and values for override the default configuration.
+</span></span><span id="35" class="l"><a href="#35">35: </a><span class="php-comment">     * @param array $dbConfig Config keys and values for override the default configuration.
 </span></span><span id="36" class="l"><a href="#36">36: </a><span class="php-comment">     */</span>
-</span><span id="37" class="l"><a href="#37">37: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-keyword1">array</span> <span class="php-var">$db_config</span> = []) {
-</span><span id="38" class="l"><a href="#38">38: </a>        <span class="php-var">$this</span>-&gt;setupConfigurationDbal(<span class="php-var">$db_config</span>);
+</span><span id="37" class="l"><a href="#37">37: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct(<span class="php-keyword1">array</span> <span class="php-var">$dbConfig</span> = []) {
+</span><span id="38" class="l"><a href="#38">38: </a>        <span class="php-var">$this</span>-&gt;setupConfigurationDbal(<span class="php-var">$dbConfig</span>);
 </span><span id="39" class="l"><a href="#39">39: </a>    }<span class="php-comment">// __construct</span>
 </span><span id="40" class="l"><a href="#40">40: </a>
 </span><span id="41" class="l"><a href="#41">41: </a>
 </span><span id="42" class="l"><a href="#42">42: </a>    <span class="php-comment">/**
 </span></span><span id="43" class="l"><a href="#43">43: </a><span class="php-comment">     * Setup configuration for Doctrine DBAL.
 </span></span><span id="44" class="l"><a href="#44">44: </a><span class="php-comment">     * 
-</span></span><span id="45" class="l"><a href="#45">45: </a><span class="php-comment">     * @param array $db_config Config keys and values for override the default configuration.
+</span></span><span id="45" class="l"><a href="#45">45: </a><span class="php-comment">     * @param array $dbConfig Config keys and values for override the default configuration.
 </span></span><span id="46" class="l"><a href="#46">46: </a><span class="php-comment">     */</span>
-</span><span id="47" class="l"><a href="#47">47: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setupConfigurationDbal(<span class="php-keyword1">array</span> <span class="php-var">$db_config</span> = [])
+</span><span id="47" class="l"><a href="#47">47: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setupConfigurationDbal(<span class="php-keyword1">array</span> <span class="php-var">$dbConfig</span> = [])
 </span><span id="48" class="l"><a href="#48">48: </a>    {
 </span><span id="49" class="l"><a href="#49">49: </a>        <span class="php-var">$DbalConfig</span> = <span class="php-keyword1">new</span> Configuration();
 </span><span id="50" class="l"><a href="#50">50: </a>
-</span><span id="51" class="l"><a href="#51">51: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$db_config</span>)) {
+</span><span id="51" class="l"><a href="#51">51: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$dbConfig</span>)) {
 </span><span id="52" class="l"><a href="#52">52: </a>            <span class="php-comment">//setup connection configuration.</span>
 </span><span id="53" class="l"><a href="#53">53: </a>            <span class="php-var">$config</span> = <span class="php-keyword1">new</span> SystemConfig();
-</span><span id="54" class="l"><a href="#54">54: </a>            <span class="php-var">$db_params</span> = <span class="php-var">$config</span>-&gt;get(<span class="php-quote">'ALL'</span>, <span class="php-quote">'db'</span>, []);
-</span><span id="55" class="l"><a href="#55">55: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$config</span>, <span class="php-var">$db_params</span>[<span class="php-quote">'table_prefix'</span>]);
+</span><span id="54" class="l"><a href="#54">54: </a>            <span class="php-var">$dbParams</span> = <span class="php-var">$config</span>-&gt;get(<span class="php-quote">'ALL'</span>, <span class="php-quote">'db'</span>, []);
+</span><span id="55" class="l"><a href="#55">55: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$config</span>, <span class="php-var">$dbParams</span>[<span class="php-quote">'table_prefix'</span>]);
 </span><span id="56" class="l"><a href="#56">56: </a>        } <span class="php-keyword1">else</span> {
-</span><span id="57" class="l"><a href="#57">57: </a>            <span class="php-var">$db_params</span> = <span class="php-var">$db_config</span>;
-</span><span id="58" class="l"><a href="#58">58: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$db_params</span>[<span class="php-quote">'table_prefix'</span>]);
+</span><span id="57" class="l"><a href="#57">57: </a>            <span class="php-var">$dbParams</span> = <span class="php-var">$dbConfig</span>;
+</span><span id="58" class="l"><a href="#58">58: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$dbParams</span>[<span class="php-quote">'table_prefix'</span>]);
 </span><span id="59" class="l"><a href="#59">59: </a>        }
 </span><span id="60" class="l"><a href="#60">60: </a>
 </span><span id="61" class="l"><a href="#61">61: </a>        <span class="php-var">$DbalConfig</span>-&gt;setSQLLogger(<span class="php-keyword1">new</span> \<span class="php-keyword2">System</span>\Libraries\Db\Logger());
 </span><span id="62" class="l"><a href="#62">62: </a>        <span class="php-keyword1">try</span> {
-</span><span id="63" class="l"><a href="#63">63: </a>            <span class="php-var">$this</span>-&gt;Conn = DriverManager::getConnection(<span class="php-var">$db_params</span>, <span class="php-var">$DbalConfig</span>);
+</span><span id="63" class="l"><a href="#63">63: </a>            <span class="php-var">$this</span>-&gt;Conn = DriverManager::getConnection(<span class="php-var">$dbParams</span>, <span class="php-var">$DbalConfig</span>);
 </span><span id="64" class="l"><a href="#64">64: </a>            <span class="php-var">$this</span>-&gt;Conn-&gt;connect();
 </span><span id="65" class="l"><a href="#65">65: </a>        } <span class="php-keyword1">catch</span> (\Doctrine\DBAL\DBALException <span class="php-var">$e</span>) {
 </span><span id="66" class="l"><a href="#66">66: </a>            <span class="php-keyword2">http_response_code</span>(<span class="php-num">500</span>);
@@ -303,7 +353,7 @@
 </span><span id="68" class="l"><a href="#68">68: </a>            <span class="php-keyword1">exit</span>;
 </span><span id="69" class="l"><a href="#69">69: </a>        }
 </span><span id="70" class="l"><a href="#70">70: </a>        <span class="php-var">$this</span>-&gt;Conn-&gt;setFetchMode(\PDO::FETCH_OBJ);
-</span><span id="71" class="l"><a href="#71">71: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$DbalConfig</span>, <span class="php-var">$db_params</span>);
+</span><span id="71" class="l"><a href="#71">71: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$DbalConfig</span>, <span class="php-var">$dbParams</span>);
 </span><span id="72" class="l"><a href="#72">72: </a>    }<span class="php-comment">// setupConfigurationDbal</span>
 </span><span id="73" class="l"><a href="#73">73: </a>
 </span><span id="74" class="l"><a href="#74">74: </a>
@@ -315,6 +365,6 @@
 </div>
 </div>
 <script src="resources/combined.js?f4e2bad254b049a90cec234b4c706e522afe19cc"></script>
-<script src="elementlist.js?07b6799dd655a4406b8d4282a17f8c968a6b496e"></script>
+<script src="elementlist.js?9344ef0605852b3a569c39889cdd7a580ba0eb46"></script>
 </body>
 </html>

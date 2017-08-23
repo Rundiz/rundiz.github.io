@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li class="active">
 					<a href="namespace-System.html">
@@ -140,8 +174,10 @@
 			<ul>
 				<li class="active"><a href="class-System.Libraries.Assets.html">Assets</a></li>
 				<li><a href="class-System.Libraries.Autoload.html">Autoload</a></li>
+				<li><a href="class-System.Libraries.Cache.html">Cache</a></li>
 				<li><a href="class-System.Libraries.Config.html">Config</a></li>
 				<li><a href="class-System.Libraries.FileSystem.html">FileSystem</a></li>
+				<li><a href="class-System.Libraries.Input.html">Input</a></li>
 				<li><a href="class-System.Libraries.Languages.html">Languages</a></li>
 				<li><a href="class-System.Libraries.Log.html">Log</a></li>
 				<li><a href="class-System.Libraries.Modules.html">Modules</a></li>
@@ -203,7 +239,7 @@
 	<div class="description">
 	<p>The assets class to work with add (enqueue), remove (dequeue), render the css, js files.</p>
 
-<p>The asset locations are at public/assets/*, public/themes/[theme_system_name]/assets/* folders.</p>
+<p>The asset locations are at public/assets/*, public/themes/[theme_system_name]/assets/*, public/Modules/[module_system_name]/assets/* folders.</p>
 	</div>
 
 
@@ -715,7 +751,7 @@ This method was called from <code>renderAssets()</code> method.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_generateAttributes">#</a>
-		<code><a href="source-class-System.Libraries.Assets.html#404-430" title="Go to source code">generateAttributes</a>( <span>array <var>$attributes</var></span>, <span>array <var>$disallow_attributes</var> = []</span> )</code>
+		<code><a href="source-class-System.Libraries.Assets.html#404-430" title="Go to source code">generateAttributes</a>( <span>array <var>$attributes</var></span>, <span>array <var>$disallowAttributes</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Generate HTML attributes by filter out disallow attributes.</p>
@@ -731,7 +767,7 @@ This method was called from <code>renderAssets()</code> method.</p>
 				<div class="list"><dl>
 					<dt><var>$attributes</var></dt>
 					<dd>The associate array of attributes. Example: <code>['title' =&gt; 'My Title', 'data-id' =&gt; 3]</code> will becomes <code>title="My Title" data-id="3"</code></dd>
-					<dt><var>$disallow_attributes</var></dt>
+					<dt><var>$disallowAttributes</var></dt>
 					<dd>The 2D array of disallow attribute names. Example: <code>['id', 'class']</code> so, the <code>$attributes</code> that contain id and class will be removed.</dd>
 				</dl></div>
 

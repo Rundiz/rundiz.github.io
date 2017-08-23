@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li>
 					<a href="namespace-System.html">
@@ -219,7 +253,7 @@
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-Modules.Home.Installer.html#14-41" title="Go to source code">Modules/Home/Installer.php</a>
+			<b>Located at</b> <a href="source-class-Modules.Home.Installer.html#14-68" title="Go to source code">Modules/Home/Installer.php</a>
 		<br>
 	</div>
 
@@ -252,7 +286,7 @@
 
 				<h4>Returns</h4>
 				<div class="list">
-					array<br>Return the array of routes.
+					array<br>Return the array of routes, if no routes then return empty array.
 				</div>
 
 
@@ -260,6 +294,129 @@
 
 				<h4>Implementation of</h4>
 				<div class="list"><code><a href="class-System.Interfaces.ModuleInstaller.html#_getRoutes">System\Interfaces\ModuleInstaller::getRoutes()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="install" id="_install">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_install">#</a>
+		<code><a href="source-class-Modules.Home.Installer.html#41-47" title="Go to source code">install</a>( <span><code><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></code> <var>$Db</var></span> )</code>
+
+		<div class="description short">
+			<p>Install a module.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Install a module.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Db</var></dt>
+					<dd>The database class.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception<br>Throw the exception error in something failed.
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-System.Interfaces.ModuleInstaller.html#_install">System\Interfaces\ModuleInstaller::install()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="uninstall" id="_uninstall">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_uninstall">#</a>
+		<code><a href="source-class-Modules.Home.Installer.html#50-56" title="Go to source code">uninstall</a>( <span><code><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></code> <var>$Db</var></span> )</code>
+
+		<div class="description short">
+			<p>Uninstall a module.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Uninstall a module.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Db</var></dt>
+					<dd>The database class.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception<br>Throw the exception error in something failed.
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-System.Interfaces.ModuleInstaller.html#_uninstall">System\Interfaces\ModuleInstaller::uninstall()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="_update">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update">#</a>
+		<code><a href="source-class-Modules.Home.Installer.html#59-65" title="Go to source code">update</a>( <span><code><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></code> <var>$Db</var></span> )</code>
+
+		<div class="description short">
+			<p>Update a module.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Update a module.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$Db</var></dt>
+					<dd>The database class.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception<br>Throw the exception error in something failed.
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-System.Interfaces.ModuleInstaller.html#_update">System\Interfaces\ModuleInstaller::update()</a></code></div>
 		</div>
 		</div></td>
 	</tr>

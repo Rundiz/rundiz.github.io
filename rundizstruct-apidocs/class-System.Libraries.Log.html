@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li class="active">
 					<a href="namespace-System.html">
@@ -140,8 +174,10 @@
 			<ul>
 				<li><a href="class-System.Libraries.Assets.html">Assets</a></li>
 				<li><a href="class-System.Libraries.Autoload.html">Autoload</a></li>
+				<li><a href="class-System.Libraries.Cache.html">Cache</a></li>
 				<li><a href="class-System.Libraries.Config.html">Config</a></li>
 				<li><a href="class-System.Libraries.FileSystem.html">FileSystem</a></li>
+				<li><a href="class-System.Libraries.Input.html">Input</a></li>
 				<li><a href="class-System.Libraries.Languages.html">Languages</a></li>
 				<li class="active"><a href="class-System.Libraries.Log.html">Log</a></li>
 				<li><a href="class-System.Libraries.Modules.html">Modules</a></li>
@@ -222,7 +258,7 @@
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-System.Libraries.Log.html#19-198" title="Go to source code">System/Libraries/Log.php</a>
+			<b>Located at</b> <a href="source-class-System.Libraries.Log.html#18-229" title="Go to source code">System/Libraries/Log.php</a>
 		<br>
 	</div>
 
@@ -242,7 +278,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-System.Libraries.Log.html#38-125" title="Go to source code">__construct</a>( <span>string <var>$channel</var> = <span class="php-quote">'rundizstruct'</span></span>, <span>string <var>$log_level</var> = <span class="php-quote">'info'</span></span>, <span>string <var>$log_file</var> = <span class="php-quote">''</span></span> )</code>
+		<code><a href="source-class-System.Libraries.Log.html#65-152" title="Go to source code">__construct</a>( <span>string <var>$channel</var> = <span class="php-quote">'rundizstruct'</span></span>, <span>string <var>$logLevel</var> = <span class="php-quote">'info'</span></span>, <span>string <var>$logFile</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			<p>Initialize logger class. this help usage of monolog shorter.</p>
@@ -256,9 +292,9 @@
 				<div class="list"><dl>
 					<dt><var>$channel</var></dt>
 					<dd>Channel name. More detail, see https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md#leveraging-channels</dd>
-					<dt><var>$log_level</var></dt>
+					<dt><var>$logLevel</var></dt>
 					<dd>Log level can be debug, info, notice, warning, error, critical, alert, emergency. More detail, see https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md#log-levels</dd>
-					<dt><var>$log_file</var></dt>
+					<dt><var>$logFile</var></dt>
 					<dd>Log file name. It is automatic generate if leave empty. More detail, see https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md</dd>
 				</dl></div>
 
@@ -281,7 +317,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_write">#</a>
-		<code><a href="source-class-System.Libraries.Log.html#128-142" title="Go to source code">write</a>( <span>string <var>$channel</var></span>, <span>string <var>$log_level</var></span>, <span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span> )</code>
+		<code><a href="source-class-System.Libraries.Log.html#155-169" title="Go to source code">write</a>( <span>string <var>$channel</var></span>, <span>string <var>$logLevel</var></span>, <span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Write the message to the log file. This is shorter static method.</p>
@@ -295,7 +331,7 @@
 				<div class="list"><dl>
 					<dt><var>$channel</var></dt>
 					<dd>Name your channel. Leave blank to use default channel name.</dd>
-					<dt><var>$log_level</var></dt>
+					<dt><var>$logLevel</var></dt>
 					<dd>Log level can be debug, info, notice, warning, error, critical, alert, emergency.</dd>
 					<dt><var>$message</var></dt>
 					<dd>The message that will be write to log file.</dd>
@@ -323,14 +359,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_writeLog">#</a>
-		<code><a href="source-class-System.Libraries.Log.html#145-195" title="Go to source code">writeLog</a>( <span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span> )</code>
+		<code><a href="source-class-System.Libraries.Log.html#172-226" title="Go to source code">writeLog</a>( <span>string <var>$message</var></span>, <span>array <var>$context</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Write message to the log file.</p>
@@ -348,6 +384,10 @@
 					<dd>Some array such as ['username' => 'myusername'].</dd>
 				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>Return true on success, false on failure.
+				</div>
 
 
 				<h4>Link</h4>
@@ -374,102 +414,102 @@
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="log_enabled" id="$log_enabled">
+	<tr data-order="logEnabled" id="$logEnabled">
 		<td class="attributes"><code>
 			protected  
 			boolean
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Log.html#30" title="Go to source code"><var>$log_enabled</var></a>
+				<a href="source-class-System.Libraries.Log.html#29-32" title="Go to source code"><var>$logEnabled</var></a>
 
 			<div class="description short">
-				
+				<p>Log enabled or not? true = yes, false = no.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Log enabled or not? true = yes, false = no.</p>
 
 			</div>
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$log_enabled" class="anchor">#</a>
+				<a href="#$logEnabled" class="anchor">#</a>
 				<code><span class="php-keyword1">true</span></code>
 			</div>
 		</td>
 	</tr>
-	<tr data-order="log_level" id="$log_level">
-		<td class="attributes"><code>
-			protected  
-			
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-System.Libraries.Log.html#31" title="Go to source code"><var>$log_level</var></a>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$log_level" class="anchor">#</a>
-				<code></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="log_level_number" id="$log_level_number">
+	<tr data-order="logLevel" id="$logLevel">
 		<td class="attributes"><code>
 			protected  
 			integer
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Log.html#32" title="Go to source code"><var>$log_level_number</var></a>
+				<a href="source-class-System.Libraries.Log.html#35-38" title="Go to source code"><var>$logLevel</var></a>
 
 			<div class="description short">
-				
+				<p>Log level from Logger class::constant.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Log level from Logger class::constant.</p>
 
 			</div>
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$log_level_number" class="anchor">#</a>
+				<a href="#$logLevel" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="logLevelNumber" id="$logLevelNumber">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-System.Libraries.Log.html#41-44" title="Go to source code"><var>$logLevelNumber</var></a>
+
+			<div class="description short">
+				<p>Log level number from 0 to 7 (emergency).</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Log level number from 0 to 7 (emergency).</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$logLevelNumber" class="anchor">#</a>
 				<code><span class="php-num">0</span></code>
 			</div>
 		</td>
 	</tr>
-	<tr data-order="log_level_text" id="$log_level_text">
+	<tr data-order="logLevelText" id="$logLevelText">
 		<td class="attributes"><code>
 			protected  
-			
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Log.html#33" title="Go to source code"><var>$log_level_text</var></a>
+				<a href="source-class-System.Libraries.Log.html#47-50" title="Go to source code"><var>$logLevelText</var></a>
 
 			<div class="description short">
-				
+				<p>Log level text.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Log level text.</p>
 
 			</div>
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$log_level_text" class="anchor">#</a>
+				<a href="#$logLevelText" class="anchor">#</a>
 				<code></code>
 			</div>
 		</td>
@@ -477,18 +517,18 @@
 	<tr data-order="Logger" id="$Logger">
 		<td class="attributes"><code>
 			protected  
-			
+			Monolog\Logger
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Log.html#34" title="Go to source code"><var>$Logger</var></a>
+				<a href="source-class-System.Libraries.Log.html#53-56" title="Go to source code"><var>$Logger</var></a>
 
 			<div class="description short">
-				
+				<p>The Monolog logger class.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The Monolog logger class.</p>
 
 			</div>
 		</td>
@@ -502,18 +542,18 @@
 	<tr data-order="Streamhandler" id="$Streamhandler">
 		<td class="attributes"><code>
 			protected  
-			
+			Monolog\Handler\StreamHandler
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.Log.html#35" title="Go to source code"><var>$Streamhandler</var></a>
+				<a href="source-class-System.Libraries.Log.html#59-62" title="Go to source code"><var>$Streamhandler</var></a>
 
 			<div class="description short">
-				
+				<p>The Monolog stream handler class.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The Monolog stream handler class.</p>
 
 			</div>
 		</td>

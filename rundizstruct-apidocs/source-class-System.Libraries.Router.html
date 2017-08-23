@@ -48,6 +48,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li>
 					<a href="namespace-System.html">
@@ -144,6 +178,17 @@
 				<li><a href="class-Modules.Languages.Controllers.GetLanguagesController.html">Modules\Languages\Controllers\GetLanguagesController</a></li>
 				<li><a href="class-Modules.Languages.Controllers.SetLanguageController.html">Modules\Languages\Controllers\SetLanguageController</a></li>
 				<li><a href="class-Modules.Languages.Installer.html">Modules\Languages\Installer</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.AdminBaseController.html">Modules\RdsAdmin\Controllers\Admin\AdminBaseController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.IndexController.html">Modules\RdsAdmin\Controllers\Admin\IndexController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.LoginController.html">Modules\RdsAdmin\Controllers\Admin\LoginController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.LogoutController.html">Modules\RdsAdmin\Controllers\Admin\LogoutController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Installer.html">Modules\RdsAdmin\Installer</a></li>
+				<li><a href="class-Modules.RdsAdmin.Libraries.Crypto.html">Modules\RdsAdmin\Libraries\Crypto</a></li>
+				<li><a href="class-Modules.RdsAdmin.Libraries.String.html">Modules\RdsAdmin\Libraries\String</a></li>
+				<li><a href="class-Modules.RdsAdmin.Models.UserLoginsDb.html">Modules\RdsAdmin\Models\UserLoginsDb</a></li>
+				<li><a href="class-Modules.RdsAdmin.Models.UsersDb.html">Modules\RdsAdmin\Models\UsersDb</a></li>
+				<li><a href="class-Modules.RdsAdmin.Tests.CryptoTest.html">Modules\RdsAdmin\Tests\CryptoTest</a></li>
+				<li><a href="class-Modules.RdsAdmin.Tests.StringTest.html">Modules\RdsAdmin\Tests\StringTest</a></li>
 				<li><a href="class-System.App.html">System\App</a></li>
 				<li><a href="class-System.CliApp.html">System\CliApp</a></li>
 				<li><a href="class-System.Core.Console.BaseConsole.html">System\Core\Console\BaseConsole</a></li>
@@ -162,11 +207,13 @@
 				<li><a href="class-System.Core.Models.ThemesDb.html">System\Core\Models\ThemesDb</a></li>
 				<li><a href="class-System.Libraries.Assets.html">System\Libraries\Assets</a></li>
 				<li><a href="class-System.Libraries.Autoload.html">System\Libraries\Autoload</a></li>
+				<li><a href="class-System.Libraries.Cache.html">System\Libraries\Cache</a></li>
 				<li><a href="class-System.Libraries.Config.html">System\Libraries\Config</a></li>
 				<li><a href="class-System.Libraries.Db.Bootstrap.html">System\Libraries\Db\Bootstrap</a></li>
 				<li><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></li>
 				<li><a href="class-System.Libraries.Db.Logger.html">System\Libraries\Db\Logger</a></li>
 				<li><a href="class-System.Libraries.FileSystem.html">System\Libraries\FileSystem</a></li>
+				<li><a href="class-System.Libraries.Input.html">System\Libraries\Input</a></li>
 				<li><a href="class-System.Libraries.Languages.html">System\Libraries\Languages</a></li>
 				<li><a href="class-System.Libraries.Log.html">System\Libraries\Log</a></li>
 				<li><a href="class-System.Libraries.Modules.html">System\Libraries\Modules</a></li>
@@ -179,6 +226,9 @@
 				<li><a href="class-Tests.Rds.BaseTestCase.html">Tests\Rds\BaseTestCase</a></li>
 				<li><a href="class-Tests.Rds.HomeTest.html">Tests\Rds\HomeTest</a></li>
 				<li><a href="class-Tests.Rds.Libraries.AssetsTest.html">Tests\Rds\Libraries\AssetsTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.DbTest.html">Tests\Rds\Libraries\DbTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.FileSystemTest.html">Tests\Rds\Libraries\FileSystemTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.InputTest.html">Tests\Rds\Libraries\InputTest</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -263,25 +313,25 @@
 </span></span><span id="28" class="l"><a href="#28"> 28: </a><span class="php-comment">     * @link https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html Reference.
 </span></span><span id="29" class="l"><a href="#29"> 29: </a><span class="php-comment">     * @var array Allowed http methods. Always use upper case. The &quot;ANY&quot; method is for Slim framework.
 </span></span><span id="30" class="l"><a href="#30"> 30: </a><span class="php-comment">     */</span>
-</span><span id="31" class="l"><a href="#31"> 31: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$allowed_http_methods</span> = [<span class="php-quote">'ANY'</span>, <span class="php-quote">'CONNECT'</span>, <span class="php-quote">'DELETE'</span>, <span class="php-quote">'GET'</span>, <span class="php-quote">'HEAD'</span>, <span class="php-quote">'OPTIONS'</span>, <span class="php-quote">'PATCH'</span>, <span class="php-quote">'POST'</span>, <span class="php-quote">'PUT'</span>, <span class="php-quote">'TRACE'</span>];
+</span><span id="31" class="l"><a href="#31"> 31: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$allowedHttpMethods</span> = [<span class="php-quote">'ANY'</span>, <span class="php-quote">'CONNECT'</span>, <span class="php-quote">'DELETE'</span>, <span class="php-quote">'GET'</span>, <span class="php-quote">'HEAD'</span>, <span class="php-quote">'OPTIONS'</span>, <span class="php-quote">'PATCH'</span>, <span class="php-quote">'POST'</span>, <span class="php-quote">'PUT'</span>, <span class="php-quote">'TRACE'</span>];
 </span><span id="32" class="l"><a href="#32"> 32: </a>
 </span><span id="33" class="l"><a href="#33"> 33: </a>
 </span><span id="34" class="l"><a href="#34"> 34: </a>    <span class="php-comment">/**
 </span></span><span id="35" class="l"><a href="#35"> 35: </a><span class="php-comment">     * @var string The controller suffix. Example: The default suffix is Controller. You specified Home controller, the controller file should be HomeController.php and the controller class should be HomeController.
 </span></span><span id="36" class="l"><a href="#36"> 36: </a><span class="php-comment">     */</span>
-</span><span id="37" class="l"><a href="#37"> 37: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$controller_suffix</span> = <span class="php-quote">'Controller'</span>;
+</span><span id="37" class="l"><a href="#37"> 37: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$controllerSuffix</span> = <span class="php-quote">'Controller'</span>;
 </span><span id="38" class="l"><a href="#38"> 38: </a>
 </span><span id="39" class="l"><a href="#39"> 39: </a>
 </span><span id="40" class="l"><a href="#40"> 40: </a>    <span class="php-comment">/**
 </span></span><span id="41" class="l"><a href="#41"> 41: </a><span class="php-comment">     * @var string The method suffix. Example: The default suffix is Action. You specified welcome method, the method name should be welcomeAction.
 </span></span><span id="42" class="l"><a href="#42"> 42: </a><span class="php-comment">     */</span>
-</span><span id="43" class="l"><a href="#43"> 43: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$method_suffix</span> = <span class="php-quote">'Action'</span>;
+</span><span id="43" class="l"><a href="#43"> 43: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$methodSuffix</span> = <span class="php-quote">'Action'</span>;
 </span><span id="44" class="l"><a href="#44"> 44: </a>
 </span><span id="45" class="l"><a href="#45"> 45: </a>
 </span><span id="46" class="l"><a href="#46"> 46: </a>    <span class="php-comment">/**
 </span></span><span id="47" class="l"><a href="#47"> 47: </a><span class="php-comment">     * @var string Full path to routes cached file.
 </span></span><span id="48" class="l"><a href="#48"> 48: </a><span class="php-comment">     */</span>
-</span><span id="49" class="l"><a href="#49"> 49: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$route_cache_file</span>;
+</span><span id="49" class="l"><a href="#49"> 49: </a>    <span class="php-keyword1">protected</span> <span class="php-var">$routeCacheFile</span>;
 </span><span id="50" class="l"><a href="#50"> 50: </a>
 </span><span id="51" class="l"><a href="#51"> 51: </a>
 </span><span id="52" class="l"><a href="#52"> 52: </a>    <span class="php-comment">/**
@@ -301,8 +351,8 @@
 </span></span><span id="66" class="l"><a href="#66"> 66: </a><span class="php-comment">     */</span>
 </span><span id="67" class="l"><a href="#67"> 67: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> addCachedRoutes()
 </span><span id="68" class="l"><a href="#68"> 68: </a>    {
-</span><span id="69" class="l"><a href="#69"> 69: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;route_cache_file != <span class="php-keyword1">null</span> &amp;&amp; <span class="php-keyword2">is_file</span>(<span class="php-var">$this</span>-&gt;route_cache_file)) {
-</span><span id="70" class="l"><a href="#70"> 70: </a>            <span class="php-keyword1">require</span> <span class="php-var">$this</span>-&gt;route_cache_file;
+</span><span id="69" class="l"><a href="#69"> 69: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;routeCacheFile != <span class="php-keyword1">null</span> &amp;&amp; <span class="php-keyword2">is_file</span>(<span class="php-var">$this</span>-&gt;routeCacheFile)) {
+</span><span id="70" class="l"><a href="#70"> 70: </a>            <span class="php-keyword1">require</span> <span class="php-var">$this</span>-&gt;routeCacheFile;
 </span><span id="71" class="l"><a href="#71"> 71: </a>        }
 </span><span id="72" class="l"><a href="#72"> 72: </a>    }<span class="php-comment">// addCachedRoutes</span>
 </span><span id="73" class="l"><a href="#73"> 73: </a>
@@ -320,24 +370,24 @@
 </span><span id="85" class="l"><a href="#85"> 85: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">key</span>(<span class="php-var">$routeArgs</span>) === <span class="php-quote">'map'</span> &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>])) {
 </span><span id="86" class="l"><a href="#86"> 86: </a>            <span class="php-comment">// route args. [map] =&gt; [HTTP methods, get, post, any], [0] is controller:method, [1] is route name.</span>
 </span><span id="87" class="l"><a href="#87"> 87: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;isAllowedMethods(<span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>])) {
-</span><span id="88" class="l"><a href="#88"> 88: </a>                <span class="php-var">$http_methods</span> = <span class="php-keyword2">array_map</span>(<span class="php-quote">'strtoupper'</span>, <span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>]);
-</span><span id="89" class="l"><a href="#89"> 89: </a>                <span class="php-var">$controller_method</span> = <span class="php-var">$this</span>-&gt;getControllerAndMethodName(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]);
-</span><span id="90" class="l"><a href="#90"> 90: </a>                <span class="php-var">$SlimApp</span> = <span class="php-keyword2">call_user_func</span>([<span class="php-var">$App</span>, <span class="php-quote">'map'</span>], <span class="php-var">$http_methods</span>, <span class="php-var">$path</span>, <span class="php-var">$controller_method</span>);
+</span><span id="88" class="l"><a href="#88"> 88: </a>                <span class="php-var">$httpMethods</span> = <span class="php-keyword2">array_map</span>(<span class="php-quote">'strtoupper'</span>, <span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>]);
+</span><span id="89" class="l"><a href="#89"> 89: </a>                <span class="php-var">$controllerMethod</span> = <span class="php-var">$this</span>-&gt;getControllerAndMethodName(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]);
+</span><span id="90" class="l"><a href="#90"> 90: </a>                <span class="php-var">$SlimApp</span> = <span class="php-keyword2">call_user_func</span>([<span class="php-var">$App</span>, <span class="php-quote">'map'</span>], <span class="php-var">$httpMethods</span>, <span class="php-var">$path</span>, <span class="php-var">$controllerMethod</span>);
 </span><span id="91" class="l"><a href="#91"> 91: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>])) {
 </span><span id="92" class="l"><a href="#92"> 92: </a>                    <span class="php-var">$SlimApp</span>-&gt;setName(<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>]);
 </span><span id="93" class="l"><a href="#93"> 93: </a>                }
-</span><span id="94" class="l"><a href="#94"> 94: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controller_method</span>, <span class="php-var">$http_methods</span>, <span class="php-var">$SlimApp</span>);
+</span><span id="94" class="l"><a href="#94"> 94: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controllerMethod</span>, <span class="php-var">$httpMethods</span>, <span class="php-var">$SlimApp</span>);
 </span><span id="95" class="l"><a href="#95"> 95: </a>            }
 </span><span id="96" class="l"><a href="#96"> 96: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">key</span>(<span class="php-var">$routeArgs</span>) === <span class="php-num">0</span>) {
 </span><span id="97" class="l"><a href="#97"> 97: </a>            <span class="php-comment">// route args. [0] is HTTP method, [1] is controller:method, [2] is route name.</span>
 </span><span id="98" class="l"><a href="#98"> 98: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>]) &amp;&amp; <span class="php-keyword2">is_string</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;isAllowedMethods(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>])) {
-</span><span id="99" class="l"><a href="#99"> 99: </a>                <span class="php-var">$http_method</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]);
-</span><span id="100" class="l"><a href="#100">100: </a>                <span class="php-var">$controller_method</span> = <span class="php-var">$this</span>-&gt;getControllerAndMethodName(<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>]);
-</span><span id="101" class="l"><a href="#101">101: </a>                <span class="php-var">$SlimApp</span> = <span class="php-keyword2">call_user_func</span>([<span class="php-var">$App</span>, <span class="php-var">$http_method</span>], <span class="php-var">$path</span>, <span class="php-var">$controller_method</span>);
+</span><span id="99" class="l"><a href="#99"> 99: </a>                <span class="php-var">$httpMethod</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]);
+</span><span id="100" class="l"><a href="#100">100: </a>                <span class="php-var">$controllerMethod</span> = <span class="php-var">$this</span>-&gt;getControllerAndMethodName(<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>]);
+</span><span id="101" class="l"><a href="#101">101: </a>                <span class="php-var">$SlimApp</span> = <span class="php-keyword2">call_user_func</span>([<span class="php-var">$App</span>, <span class="php-var">$httpMethod</span>], <span class="php-var">$path</span>, <span class="php-var">$controllerMethod</span>);
 </span><span id="102" class="l"><a href="#102">102: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">2</span>])) {
 </span><span id="103" class="l"><a href="#103">103: </a>                    <span class="php-var">$SlimApp</span>-&gt;setName(<span class="php-var">$routeArgs</span>[<span class="php-num">2</span>]);
 </span><span id="104" class="l"><a href="#104">104: </a>                }
-</span><span id="105" class="l"><a href="#105">105: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controller_method</span>, <span class="php-var">$http_method</span>, <span class="php-var">$SlimApp</span>);
+</span><span id="105" class="l"><a href="#105">105: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controllerMethod</span>, <span class="php-var">$httpMethod</span>, <span class="php-var">$SlimApp</span>);
 </span><span id="106" class="l"><a href="#106">106: </a>            }
 </span><span id="107" class="l"><a href="#107">107: </a>        }
 </span><span id="108" class="l"><a href="#108">108: </a>    }<span class="php-comment">// addRoute</span>
@@ -395,12 +445,12 @@
 </span><span id="160" class="l"><a href="#160">160: </a>                <span class="php-var">$thisClass</span> = <span class="php-var">$this</span>;
 </span><span id="161" class="l"><a href="#161">161: </a>                <span class="php-keyword2">call_user_func</span>([<span class="php-var">$this</span>-&gt;App, <span class="php-quote">'group'</span>], <span class="php-var">$path</span>, <span class="php-keyword1">function</span>() {
 </span><span id="162" class="l"><a href="#162">162: </a>                    <span class="php-keyword1">global</span> <span class="php-var">$routeGroups</span>, <span class="php-var">$thisClass</span>;
-</span><span id="163" class="l"><a href="#163">163: </a>                    <span class="php-keyword1">foreach</span> (<span class="php-var">$routeGroups</span> <span class="php-keyword1">as</span> <span class="php-var">$each_group_path</span> =&gt; <span class="php-var">$each_group_args</span>) {
-</span><span id="164" class="l"><a href="#164">164: </a>                        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$each_group_args</span>)) {
-</span><span id="165" class="l"><a href="#165">165: </a>                            <span class="php-var">$thisClass</span>-&gt;addRoute(<span class="php-var">$each_group_args</span>, <span class="php-var">$this</span>, <span class="php-var">$each_group_path</span>);
-</span><span id="166" class="l"><a href="#166">166: </a>                        }<span class="php-comment">// endif; is_array($each_group_args)</span>
+</span><span id="163" class="l"><a href="#163">163: </a>                    <span class="php-keyword1">foreach</span> (<span class="php-var">$routeGroups</span> <span class="php-keyword1">as</span> <span class="php-var">$eachGroupPath</span> =&gt; <span class="php-var">$eachGroupArgs</span>) {
+</span><span id="164" class="l"><a href="#164">164: </a>                        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$eachGroupArgs</span>)) {
+</span><span id="165" class="l"><a href="#165">165: </a>                            <span class="php-var">$thisClass</span>-&gt;addRoute(<span class="php-var">$eachGroupArgs</span>, <span class="php-var">$this</span>, <span class="php-var">$eachGroupPath</span>);
+</span><span id="166" class="l"><a href="#166">166: </a>                        }<span class="php-comment">// endif; is_array($eachGroupArgs)</span>
 </span><span id="167" class="l"><a href="#167">167: </a>                    }<span class="php-comment">// endforeach;</span>
-</span><span id="168" class="l"><a href="#168">168: </a>                    <span class="php-keyword1">unset</span>(<span class="php-var">$each_group_args</span>, <span class="php-var">$each_group_path</span>);
+</span><span id="168" class="l"><a href="#168">168: </a>                    <span class="php-keyword1">unset</span>(<span class="php-var">$eachGroupArgs</span>, <span class="php-var">$eachGroupPath</span>);
 </span><span id="169" class="l"><a href="#169">169: </a>                });<span class="php-comment">// close call_user_func to $SlimApp-&gt;group().</span>
 </span><span id="170" class="l"><a href="#170">170: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$routeGroups</span>, <span class="php-var">$thisClass</span>);
 </span><span id="171" class="l"><a href="#171">171: </a>            } <span class="php-keyword1">else</span> {
@@ -431,42 +481,42 @@
 </span><span id="196" class="l"><a href="#196">196: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">key</span>(<span class="php-var">$routeArgs</span>) === <span class="php-quote">'map'</span> &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>])) {
 </span><span id="197" class="l"><a href="#197">197: </a>            <span class="php-comment">// route args. [map] =&gt; [HTTP methods, get, post, any], [0] is controller:method, [1] is route name.</span>
 </span><span id="198" class="l"><a href="#198">198: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;isAllowedMethods(<span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>])) {
-</span><span id="199" class="l"><a href="#199">199: </a>                <span class="php-var">$http_methods</span> = <span class="php-keyword2">array_map</span>(<span class="php-quote">'strtoupper'</span>, <span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>]);
-</span><span id="200" class="l"><a href="#200">200: </a>                <span class="php-var">$controller_method</span> = <span class="php-var">$this</span>-&gt;getControllerAndMethodName(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]);
+</span><span id="199" class="l"><a href="#199">199: </a>                <span class="php-var">$httpMethods</span> = <span class="php-keyword2">array_map</span>(<span class="php-quote">'strtoupper'</span>, <span class="php-var">$routeArgs</span>[<span class="php-quote">'map'</span>]);
+</span><span id="200" class="l"><a href="#200">200: </a>                <span class="php-var">$controllerMethod</span> = <span class="php-var">$this</span>-&gt;getControllerAndMethodName(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]);
 </span><span id="201" class="l"><a href="#201">201: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'$this-&gt;App-&gt;map('</span>;
 </span><span id="202" class="l"><a href="#202">202: </a>                <span class="php-comment">// map methods</span>
 </span><span id="203" class="l"><a href="#203">203: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'['</span>;
-</span><span id="204" class="l"><a href="#204">204: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'\''</span>.<span class="php-keyword2">implode</span>(<span class="php-quote">'\', \''</span>, <span class="php-var">$http_methods</span>).<span class="php-quote">'\''</span>;
+</span><span id="204" class="l"><a href="#204">204: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'\''</span>.<span class="php-keyword2">implode</span>(<span class="php-quote">'\', \''</span>, <span class="php-var">$httpMethods</span>).<span class="php-quote">'\''</span>;
 </span><span id="205" class="l"><a href="#205">205: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'], '</span>;
 </span><span id="206" class="l"><a href="#206">206: </a>                <span class="php-comment">// path</span>
 </span><span id="207" class="l"><a href="#207">207: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'\''</span>.<span class="php-var">$path</span>.<span class="php-quote">'\', '</span>;
 </span><span id="208" class="l"><a href="#208">208: </a>                <span class="php-comment">// controller method</span>
-</span><span id="209" class="l"><a href="#209">209: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'\''</span>.<span class="php-var">$controller_method</span>.<span class="php-quote">'\''</span>;
+</span><span id="209" class="l"><a href="#209">209: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'\''</span>.<span class="php-var">$controllerMethod</span>.<span class="php-quote">'\''</span>;
 </span><span id="210" class="l"><a href="#210">210: </a>                <span class="php-var">$output</span> .= <span class="php-quote">')'</span>;<span class="php-comment">// end map() call.</span>
 </span><span id="211" class="l"><a href="#211">211: </a>                <span class="php-comment">// route name</span>
 </span><span id="212" class="l"><a href="#212">212: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>])) {
 </span><span id="213" class="l"><a href="#213">213: </a>                    <span class="php-var">$output</span> .= <span class="php-quote">'-&gt;setName(\''</span>.<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>].<span class="php-quote">'\')'</span>;
 </span><span id="214" class="l"><a href="#214">214: </a>                }
 </span><span id="215" class="l"><a href="#215">215: </a>                <span class="php-var">$output</span> .= <span class="php-quote">';'</span>.<span class="php-quote">&quot;\n&quot;</span>;
-</span><span id="216" class="l"><a href="#216">216: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controller_method</span>, <span class="php-var">$http_methods</span>);
+</span><span id="216" class="l"><a href="#216">216: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controllerMethod</span>, <span class="php-var">$httpMethods</span>);
 </span><span id="217" class="l"><a href="#217">217: </a>            }
 </span><span id="218" class="l"><a href="#218">218: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">key</span>(<span class="php-var">$routeArgs</span>) === <span class="php-num">0</span>) {
 </span><span id="219" class="l"><a href="#219">219: </a>            <span class="php-comment">// route args. [0] is HTTP method, [1] is controller:method, [2] is route name.</span>
 </span><span id="220" class="l"><a href="#220">220: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>]) &amp;&amp; <span class="php-keyword2">is_string</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;isAllowedMethods(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>])) {
-</span><span id="221" class="l"><a href="#221">221: </a>                <span class="php-var">$http_method</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]);
-</span><span id="222" class="l"><a href="#222">222: </a>                <span class="php-var">$controller_method</span> = <span class="php-var">$this</span>-&gt;getControllerAndMethodName(<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>]);
-</span><span id="223" class="l"><a href="#223">223: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'$this-&gt;App-&gt;'</span>.<span class="php-var">$http_method</span>.<span class="php-quote">'('</span>;
+</span><span id="221" class="l"><a href="#221">221: </a>                <span class="php-var">$httpMethod</span> = <span class="php-keyword2">strtolower</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]);
+</span><span id="222" class="l"><a href="#222">222: </a>                <span class="php-var">$controllerMethod</span> = <span class="php-var">$this</span>-&gt;getControllerAndMethodName(<span class="php-var">$routeArgs</span>[<span class="php-num">1</span>]);
+</span><span id="223" class="l"><a href="#223">223: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'$this-&gt;App-&gt;'</span>.<span class="php-var">$httpMethod</span>.<span class="php-quote">'('</span>;
 </span><span id="224" class="l"><a href="#224">224: </a>                <span class="php-comment">// path</span>
 </span><span id="225" class="l"><a href="#225">225: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'\''</span>.<span class="php-var">$path</span>.<span class="php-quote">'\', '</span>;
 </span><span id="226" class="l"><a href="#226">226: </a>                <span class="php-comment">// controller method</span>
-</span><span id="227" class="l"><a href="#227">227: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'\''</span>.<span class="php-var">$controller_method</span>.<span class="php-quote">'\''</span>;
+</span><span id="227" class="l"><a href="#227">227: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'\''</span>.<span class="php-var">$controllerMethod</span>.<span class="php-quote">'\''</span>;
 </span><span id="228" class="l"><a href="#228">228: </a>                <span class="php-var">$output</span> .= <span class="php-quote">')'</span>;<span class="php-comment">// end method() call.</span>
 </span><span id="229" class="l"><a href="#229">229: </a>                <span class="php-comment">// route name</span>
 </span><span id="230" class="l"><a href="#230">230: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">2</span>])) {
 </span><span id="231" class="l"><a href="#231">231: </a>                    <span class="php-var">$output</span> .= <span class="php-quote">'-&gt;setName(\''</span>.<span class="php-var">$routeArgs</span>[<span class="php-num">2</span>].<span class="php-quote">'\')'</span>;
 </span><span id="232" class="l"><a href="#232">232: </a>                }
 </span><span id="233" class="l"><a href="#233">233: </a>                <span class="php-var">$output</span> .= <span class="php-quote">';'</span>.<span class="php-quote">&quot;\n&quot;</span>;
-</span><span id="234" class="l"><a href="#234">234: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controller_method</span>, <span class="php-var">$http_method</span>);
+</span><span id="234" class="l"><a href="#234">234: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controllerMethod</span>, <span class="php-var">$httpMethod</span>);
 </span><span id="235" class="l"><a href="#235">235: </a>            }
 </span><span id="236" class="l"><a href="#236">236: </a>        }
 </span><span id="237" class="l"><a href="#237">237: </a>
@@ -497,10 +547,10 @@
 </span><span id="262" class="l"><a href="#262">262: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-keyword2">is_array</span>(<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>])) {
 </span><span id="263" class="l"><a href="#263">263: </a>                <span class="php-comment">// if this is route groups.</span>
 </span><span id="264" class="l"><a href="#264">264: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'$this-&gt;App-&gt;group(\''</span>.<span class="php-var">$path</span>.<span class="php-quote">'\', function() {'</span>.<span class="php-quote">&quot;\n&quot;</span>;
-</span><span id="265" class="l"><a href="#265">265: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>] <span class="php-keyword1">as</span> <span class="php-var">$each_group_path</span> =&gt; <span class="php-var">$each_group_args</span>) {
-</span><span id="266" class="l"><a href="#266">266: </a>                    <span class="php-var">$output</span> .= <span class="php-quote">'    '</span>.<span class="php-keyword2">str_replace</span>(<span class="php-quote">'$this-&gt;App'</span>, <span class="php-quote">'$this'</span>, <span class="php-var">$this</span>-&gt;buildCacheRoute(<span class="php-var">$each_group_args</span>, <span class="php-var">$each_group_path</span>));
+</span><span id="265" class="l"><a href="#265">265: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$routeArgs</span>[<span class="php-num">0</span>] <span class="php-keyword1">as</span> <span class="php-var">$eachGroupPath</span> =&gt; <span class="php-var">$eachGroupArgs</span>) {
+</span><span id="266" class="l"><a href="#266">266: </a>                    <span class="php-var">$output</span> .= <span class="php-quote">'    '</span>.<span class="php-keyword2">str_replace</span>(<span class="php-quote">'$this-&gt;App'</span>, <span class="php-quote">'$this'</span>, <span class="php-var">$this</span>-&gt;buildCacheRoute(<span class="php-var">$eachGroupArgs</span>, <span class="php-var">$eachGroupPath</span>));
 </span><span id="267" class="l"><a href="#267">267: </a>                }<span class="php-comment">// endforeach;</span>
-</span><span id="268" class="l"><a href="#268">268: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$each_group_args</span>, <span class="php-var">$each_group_path</span>);
+</span><span id="268" class="l"><a href="#268">268: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$eachGroupArgs</span>, <span class="php-var">$eachGroupPath</span>);
 </span><span id="269" class="l"><a href="#269">269: </a>                <span class="php-var">$output</span> .= <span class="php-quote">'});'</span>.<span class="php-quote">&quot;\n&quot;</span>;<span class="php-comment">// end group(); route.</span>
 </span><span id="270" class="l"><a href="#270">270: </a>            } <span class="php-keyword1">else</span> {
 </span><span id="271" class="l"><a href="#271">271: </a>                <span class="php-comment">// if this is NOT route groups.</span>
@@ -513,10 +563,10 @@
 </span><span id="278" class="l"><a href="#278">278: </a>
 </span><span id="279" class="l"><a href="#279">279: </a>        <span class="php-comment">// write these routes file for slim.</span>
 </span><span id="280" class="l"><a href="#280">280: </a>        <span class="php-var">$FileSystem</span> = <span class="php-keyword1">new</span> \<span class="php-keyword2">System</span>\Libraries\FileSystem(STORAGE_PATH . DIRECTORY_SEPARATOR . <span class="php-quote">'config'</span>);
-</span><span id="281" class="l"><a href="#281">281: </a>        <span class="php-var">$build_result</span> = <span class="php-var">$FileSystem</span>-&gt;writeFile(<span class="php-quote">'routes-slim.php'</span>, <span class="php-var">$output</span>);
+</span><span id="281" class="l"><a href="#281">281: </a>        <span class="php-var">$buildResult</span> = <span class="php-var">$FileSystem</span>-&gt;writeFile(<span class="php-quote">'routes-slim.php'</span>, <span class="php-var">$output</span>);
 </span><span id="282" class="l"><a href="#282">282: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$FileSystem</span>, <span class="php-var">$output</span>);
 </span><span id="283" class="l"><a href="#283">283: </a>
-</span><span id="284" class="l"><a href="#284">284: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$build_result</span> !== <span class="php-keyword1">false</span>) {
+</span><span id="284" class="l"><a href="#284">284: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$buildResult</span> !== <span class="php-keyword1">false</span>) {
 </span><span id="285" class="l"><a href="#285">285: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
 </span><span id="286" class="l"><a href="#286">286: </a>        }
 </span><span id="287" class="l"><a href="#287">287: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
@@ -526,23 +576,23 @@
 </span><span id="291" class="l"><a href="#291">291: </a>    <span class="php-comment">/**
 </span></span><span id="292" class="l"><a href="#292">292: </a><span class="php-comment">     * Get controller and method name if suffix included.
 </span></span><span id="293" class="l"><a href="#293">293: </a><span class="php-comment">     * 
-</span></span><span id="294" class="l"><a href="#294">294: </a><span class="php-comment">     * @param string $controller_method The controller and method that works with Slim route. Example: \Module\Home\Controllers\Index:index
+</span></span><span id="294" class="l"><a href="#294">294: </a><span class="php-comment">     * @param string $controllerMethod The controller and method that works with Slim route. Example: \Module\Home\Controllers\Index:index
 </span></span><span id="295" class="l"><a href="#295">295: </a><span class="php-comment">     * @return string Return controller and method with suffix included. Example: \Module\Home\Controllers\IndexController:indexAction (in case that all suffix are default values).
 </span></span><span id="296" class="l"><a href="#296">296: </a><span class="php-comment">     */</span>
-</span><span id="297" class="l"><a href="#297">297: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getControllerAndMethodName(<span class="php-var">$controller_method</span>)
+</span><span id="297" class="l"><a href="#297">297: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getControllerAndMethodName(<span class="php-var">$controllerMethod</span>)
 </span><span id="298" class="l"><a href="#298">298: </a>    {
-</span><span id="299" class="l"><a href="#299">299: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$controller_method</span>, <span class="php-quote">':'</span>)) {
-</span><span id="300" class="l"><a href="#300">300: </a>            <span class="php-var">$explode_controller_method</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">':'</span>, <span class="php-var">$controller_method</span>);
-</span><span id="301" class="l"><a href="#301">301: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$explode_controller_method</span>) == <span class="php-quote">'2'</span> &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$explode_controller_method</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$explode_controller_method</span>[<span class="php-num">1</span>])) {
-</span><span id="302" class="l"><a href="#302">302: </a>                <span class="php-var">$controller_name</span> = <span class="php-var">$explode_controller_method</span>[<span class="php-num">0</span>] . <span class="php-var">$this</span>-&gt;controller_suffix;
-</span><span id="303" class="l"><a href="#303">303: </a>                <span class="php-var">$method_name</span> = <span class="php-var">$explode_controller_method</span>[<span class="php-num">1</span>] . <span class="php-var">$this</span>-&gt;method_suffix;
-</span><span id="304" class="l"><a href="#304">304: </a>                <span class="php-var">$controller_method</span> = <span class="php-var">$controller_name</span> . <span class="php-quote">':'</span> . <span class="php-var">$method_name</span>;
-</span><span id="305" class="l"><a href="#305">305: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controller_name</span>, <span class="php-var">$method_name</span>);
+</span><span id="299" class="l"><a href="#299">299: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$controllerMethod</span>, <span class="php-quote">':'</span>)) {
+</span><span id="300" class="l"><a href="#300">300: </a>            <span class="php-var">$explodeControllerMethod</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">':'</span>, <span class="php-var">$controllerMethod</span>);
+</span><span id="301" class="l"><a href="#301">301: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$explodeControllerMethod</span>) == <span class="php-quote">'2'</span> &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$explodeControllerMethod</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$explodeControllerMethod</span>[<span class="php-num">1</span>])) {
+</span><span id="302" class="l"><a href="#302">302: </a>                <span class="php-var">$controllerName</span> = <span class="php-var">$explodeControllerMethod</span>[<span class="php-num">0</span>] . <span class="php-var">$this</span>-&gt;controllerSuffix;
+</span><span id="303" class="l"><a href="#303">303: </a>                <span class="php-var">$methodName</span> = <span class="php-var">$explodeControllerMethod</span>[<span class="php-num">1</span>] . <span class="php-var">$this</span>-&gt;methodSuffix;
+</span><span id="304" class="l"><a href="#304">304: </a>                <span class="php-var">$controllerMethod</span> = <span class="php-var">$controllerName</span> . <span class="php-quote">':'</span> . <span class="php-var">$methodName</span>;
+</span><span id="305" class="l"><a href="#305">305: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$controllerName</span>, <span class="php-var">$methodName</span>);
 </span><span id="306" class="l"><a href="#306">306: </a>            }
-</span><span id="307" class="l"><a href="#307">307: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$explode_controller_method</span>);
+</span><span id="307" class="l"><a href="#307">307: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$explodeControllerMethod</span>);
 </span><span id="308" class="l"><a href="#308">308: </a>        }
 </span><span id="309" class="l"><a href="#309">309: </a>
-</span><span id="310" class="l"><a href="#310">310: </a>        <span class="php-keyword1">return</span> <span class="php-var">$controller_method</span>;
+</span><span id="310" class="l"><a href="#310">310: </a>        <span class="php-keyword1">return</span> <span class="php-var">$controllerMethod</span>;
 </span><span id="311" class="l"><a href="#311">311: </a>    }<span class="php-comment">// getControllerAndMethodName</span>
 </span><span id="312" class="l"><a href="#312">312: </a>
 </span><span id="313" class="l"><a href="#313">313: </a>
@@ -555,17 +605,17 @@
 </span><span id="320" class="l"><a href="#320">320: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isAllowedMethods(<span class="php-var">$method</span>)
 </span><span id="321" class="l"><a href="#321">321: </a>    {
 </span><span id="322" class="l"><a href="#322">322: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$method</span>)) {
-</span><span id="323" class="l"><a href="#323">323: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">in_array</span>(<span class="php-keyword2">strtoupper</span>(<span class="php-var">$method</span>), <span class="php-var">$this</span>-&gt;allowed_http_methods);
+</span><span id="323" class="l"><a href="#323">323: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">in_array</span>(<span class="php-keyword2">strtoupper</span>(<span class="php-var">$method</span>), <span class="php-var">$this</span>-&gt;allowedHttpMethods);
 </span><span id="324" class="l"><a href="#324">324: </a>        } <span class="php-keyword1">elseif</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$method</span>)) {
-</span><span id="325" class="l"><a href="#325">325: </a>            <span class="php-var">$total_checked</span> = <span class="php-num">0</span>;
-</span><span id="326" class="l"><a href="#326">326: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$method</span> <span class="php-keyword1">as</span> <span class="php-var">$each_method</span>) {
-</span><span id="327" class="l"><a href="#327">327: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$each_method</span>) &amp;&amp; <span class="php-keyword2">in_array</span>(<span class="php-keyword2">strtoupper</span>(<span class="php-var">$each_method</span>), <span class="php-var">$this</span>-&gt;allowed_http_methods)) {
-</span><span id="328" class="l"><a href="#328">328: </a>                    <span class="php-var">$total_checked</span>++;
+</span><span id="325" class="l"><a href="#325">325: </a>            <span class="php-var">$totalChecked</span> = <span class="php-num">0</span>;
+</span><span id="326" class="l"><a href="#326">326: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$method</span> <span class="php-keyword1">as</span> <span class="php-var">$eachMethod</span>) {
+</span><span id="327" class="l"><a href="#327">327: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_string</span>(<span class="php-var">$eachMethod</span>) &amp;&amp; <span class="php-keyword2">in_array</span>(<span class="php-keyword2">strtoupper</span>(<span class="php-var">$eachMethod</span>), <span class="php-var">$this</span>-&gt;allowedHttpMethods)) {
+</span><span id="328" class="l"><a href="#328">328: </a>                    <span class="php-var">$totalChecked</span>++;
 </span><span id="329" class="l"><a href="#329">329: </a>                }
 </span><span id="330" class="l"><a href="#330">330: </a>            }<span class="php-comment">// endforeach;</span>
-</span><span id="331" class="l"><a href="#331">331: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$each_method</span>);
+</span><span id="331" class="l"><a href="#331">331: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$eachMethod</span>);
 </span><span id="332" class="l"><a href="#332">332: </a>
-</span><span id="333" class="l"><a href="#333">333: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$method</span>) == <span class="php-var">$total_checked</span>) {
+</span><span id="333" class="l"><a href="#333">333: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$method</span>) == <span class="php-var">$totalChecked</span>) {
 </span><span id="334" class="l"><a href="#334">334: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
 </span><span id="335" class="l"><a href="#335">335: </a>            }
 </span><span id="336" class="l"><a href="#336">336: </a>        }
@@ -581,23 +631,23 @@
 </span></span><span id="346" class="l"><a href="#346">346: </a><span class="php-comment">     */</span>
 </span><span id="347" class="l"><a href="#347">347: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> isRouteCached()
 </span><span id="348" class="l"><a href="#348">348: </a>    {
-</span><span id="349" class="l"><a href="#349">349: </a>        <span class="php-var">$this</span>-&gt;route_cache_file = STORAGE_PATH . DIRECTORY_SEPARATOR . <span class="php-quote">'config'</span> . DIRECTORY_SEPARATOR . <span class="php-quote">'routes-slim.php'</span>;
+</span><span id="349" class="l"><a href="#349">349: </a>        <span class="php-var">$this</span>-&gt;routeCacheFile = STORAGE_PATH . DIRECTORY_SEPARATOR . <span class="php-quote">'config'</span> . DIRECTORY_SEPARATOR . <span class="php-quote">'routes-slim.php'</span>;
 </span><span id="350" class="l"><a href="#350">350: </a>
-</span><span id="351" class="l"><a href="#351">351: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_file</span>(<span class="php-var">$this</span>-&gt;route_cache_file)) {
+</span><span id="351" class="l"><a href="#351">351: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_file</span>(<span class="php-var">$this</span>-&gt;routeCacheFile)) {
 </span><span id="352" class="l"><a href="#352">352: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
 </span><span id="353" class="l"><a href="#353">353: </a>        } <span class="php-keyword1">else</span> {
 </span><span id="354" class="l"><a href="#354">354: </a>            <span class="php-var">$FileSystem</span> = <span class="php-keyword1">new</span> \<span class="php-keyword2">System</span>\Libraries\FileSystem(STORAGE_PATH . DIRECTORY_SEPARATOR . <span class="php-quote">'config'</span>);
-</span><span id="355" class="l"><a href="#355">355: </a>            <span class="php-var">$file_ts</span> = <span class="php-var">$FileSystem</span>-&gt;getTimestamp(<span class="php-quote">'routes-slim.php'</span>);
-</span><span id="356" class="l"><a href="#356">356: </a>            <span class="php-var">$day_old</span> = ((<span class="php-keyword2">time</span>()-<span class="php-var">$file_ts</span>)/<span class="php-num">60</span>/<span class="php-num">60</span>/<span class="php-num">24</span>);
-</span><span id="357" class="l"><a href="#357">357: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$file_ts</span>, <span class="php-var">$FileSystem</span>);
+</span><span id="355" class="l"><a href="#355">355: </a>            <span class="php-var">$fileTs</span> = <span class="php-var">$FileSystem</span>-&gt;getTimestamp(<span class="php-quote">'routes-slim.php'</span>);
+</span><span id="356" class="l"><a href="#356">356: </a>            <span class="php-var">$dayOld</span> = ((<span class="php-keyword2">time</span>()-<span class="php-var">$fileTs</span>)/<span class="php-num">60</span>/<span class="php-num">60</span>/<span class="php-num">24</span>);
+</span><span id="357" class="l"><a href="#357">357: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$fileTs</span>, <span class="php-var">$FileSystem</span>);
 </span><span id="358" class="l"><a href="#358">358: </a>
-</span><span id="359" class="l"><a href="#359">359: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$day_old</span> &gt; <span class="php-num">30</span>) {
+</span><span id="359" class="l"><a href="#359">359: </a>            <span class="php-keyword1">if</span> (<span class="php-var">$dayOld</span> &gt; <span class="php-num">30</span>) {
 </span><span id="360" class="l"><a href="#360">360: </a>                <span class="php-comment">// older than 30 days, expired.</span>
-</span><span id="361" class="l"><a href="#361">361: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$day_old</span>);
+</span><span id="361" class="l"><a href="#361">361: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$dayOld</span>);
 </span><span id="362" class="l"><a href="#362">362: </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
 </span><span id="363" class="l"><a href="#363">363: </a>            }
 </span><span id="364" class="l"><a href="#364">364: </a>
-</span><span id="365" class="l"><a href="#365">365: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$day_old</span>);
+</span><span id="365" class="l"><a href="#365">365: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$dayOld</span>);
 </span><span id="366" class="l"><a href="#366">366: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
 </span><span id="367" class="l"><a href="#367">367: </a>        }
 </span><span id="368" class="l"><a href="#368">368: </a>    }<span class="php-comment">// isRouteCached</span>
@@ -611,6 +661,6 @@
 </div>
 </div>
 <script src="resources/combined.js?f4e2bad254b049a90cec234b4c706e522afe19cc"></script>
-<script src="elementlist.js?07b6799dd655a4406b8d4282a17f8c968a6b496e"></script>
+<script src="elementlist.js?9344ef0605852b3a569c39889cdd7a580ba0eb46"></script>
 </body>
 </html>

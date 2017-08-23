@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li class="active">
 					<a href="namespace-System.html">
@@ -229,7 +263,7 @@
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-System.Core.Models.LanguagesDb.html#12-268" title="Go to source code">System/Core/Models/LanguagesDb.php</a>
+			<b>Located at</b> <a href="source-class-System.Core.Models.LanguagesDb.html#12-265" title="Go to source code">System/Core/Models/LanguagesDb.php</a>
 		<br>
 	</div>
 
@@ -354,7 +388,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get">#</a>
-		<code><a href="source-class-System.Core.Models.LanguagesDb.html#135-173" title="Go to source code">get</a>( <span>string <var>$language_locale_uri</var></span>, <span>string <var>$return_field</var> = <span class="php-quote">''</span></span> )</code>
+		<code><a href="source-class-System.Core.Models.LanguagesDb.html#135-173" title="Go to source code">get</a>( <span>string <var>$languageLocaleUri</var></span>, <span>string <var>$returnField</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			<p>Get language data.</p>
@@ -366,15 +400,15 @@
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$language_locale_uri</var></dt>
+					<dt><var>$languageLocaleUri</var></dt>
 					<dd>The language locale URI (Example: th, en-US).</dd>
-					<dt><var>$return_field</var></dt>
+					<dt><var>$returnField</var></dt>
 					<dd>The field that you want to get value, if empty string means get it all.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					mixed<br>Return value of selected field, if <code>$return_field</code> is empty or means get all then it will return all fields as array with key, or if it found nothing then it will return empty array.
+					mixed<br>Return value of selected field, if <code>$returnField</code> is empty or means get all then it will return all fields as array with key, or if it found nothing then it will return empty array.
 				</div>
 
 
@@ -395,7 +429,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getConfigFile">#</a>
-		<code><a href="source-class-System.Core.Models.LanguagesDb.html#176-208" title="Go to source code">getConfigFile</a>( )</code>
+		<code><a href="source-class-System.Core.Models.LanguagesDb.html#176-205" title="Go to source code">getConfigFile</a>( )</code>
 
 		<div class="description short">
 			<p>Get the path to languages file.<br>
@@ -431,7 +465,7 @@ The configurations are in db inside languages table and it will be auto generate
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDefaultLanguage">#</a>
-		<code><a href="source-class-System.Core.Models.LanguagesDb.html#211-252" title="Go to source code">getDefaultLanguage</a>( )</code>
+		<code><a href="source-class-System.Core.Models.LanguagesDb.html#208-249" title="Go to source code">getDefaultLanguage</a>( )</code>
 
 		<div class="description short">
 			<p>Get the default language.</p>
@@ -465,7 +499,7 @@ The configurations are in db inside languages table and it will be auto generate
 
 		<td class="name"><div>
 		<a class="anchor" href="#_load">#</a>
-		<code><a href="source-class-System.Core.Models.LanguagesDb.html#255-265" title="Go to source code">load</a>( )</code>
+		<code><a href="source-class-System.Core.Models.LanguagesDb.html#252-262" title="Go to source code">load</a>( )</code>
 
 		<div class="description short">
 			<p>Load the languages file into variable.</p>
@@ -498,14 +532,14 @@ The configurations are in db inside languages table and it will be auto generate
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="config_db_folder" id="$config_db_folder">
+	<tr data-order="configDbFolder" id="$configDbFolder">
 		<td class="attributes"><code>
 			protected  
 			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Core.Models.LanguagesDb.html#21-24" title="Go to source code"><var>$config_db_folder</var></a>
+				<a href="source-class-System.Core.Models.LanguagesDb.html#21-24" title="Go to source code"><var>$configDbFolder</var></a>
 
 			<div class="description short">
 				<p>Path to config db folder without trailing slash. The config db will be auto generate into file inside this folder.</p>
@@ -518,19 +552,19 @@ The configurations are in db inside languages table and it will be auto generate
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$config_db_folder" class="anchor">#</a>
+				<a href="#$configDbFolder" class="anchor">#</a>
 				<code></code>
 			</div>
 		</td>
 	</tr>
-	<tr data-order="config_db_file" id="$config_db_file">
+	<tr data-order="configDbFile" id="$configDbFile">
 		<td class="attributes"><code>
 			protected  
 			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Core.Models.LanguagesDb.html#27-30" title="Go to source code"><var>$config_db_file</var></a>
+				<a href="source-class-System.Core.Models.LanguagesDb.html#27-30" title="Go to source code"><var>$configDbFile</var></a>
 
 			<div class="description short">
 				<p>The config file name. The config db will be auto generate into this file.</p>
@@ -543,7 +577,7 @@ The configurations are in db inside languages table and it will be auto generate
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$config_db_file" class="anchor">#</a>
+				<a href="#$configDbFile" class="anchor">#</a>
 				<code><span class="php-quote">'languages-db.php'</span></code>
 			</div>
 		</td>
@@ -556,7 +590,7 @@ The configurations are in db inside languages table and it will be auto generate
 		<td><code>
 			<a href="class-System.Core.Models.BaseModelDb.html#$Conn"><var>$Conn</var></a>, 
 			<a href="class-System.Core.Models.BaseModelDb.html#$Db"><var>$Db</var></a>, 
-			<a href="class-System.Core.Models.BaseModelDb.html#$allowed_orders"><var>$allowed_orders</var></a>
+			<a href="class-System.Core.Models.BaseModelDb.html#$allowedOrders"><var>$allowedOrders</var></a>
 		</code></td>
 	</tr>
 	</table>

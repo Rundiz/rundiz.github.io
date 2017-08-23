@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li class="active">
 					<a href="namespace-System.html">
@@ -200,6 +234,12 @@ It is required symfony/console which will be installed with development mode in 
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
+Slim\App
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
 			<a href="class-System.App.html"><span>System\App</span></a>
 			
 			
@@ -207,7 +247,7 @@ It is required symfony/console which will be installed with development mode in 
 					<a href="class-System.Traits.Profiler.html"><span>System\Traits\Profiler</span></a>
 			
 		</dd>
-		<dd style="padding-left:30px">
+		<dd style="padding-left:60px">
 			<img src="resources/inherit.png" alt="Extended by">
 <b><span>System\CliApp</span></b>			
 			
@@ -230,7 +270,7 @@ It is required symfony/console which will be installed with development mode in 
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-System.CliApp.html#14-172" title="Go to source code">System/CliApp.php</a>
+			<b>Located at</b> <a href="source-class-System.CliApp.html#14-143" title="Go to source code">System/CliApp.php</a>
 		<br>
 	</div>
 
@@ -250,7 +290,7 @@ It is required symfony/console which will be installed with development mode in 
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getAvailableCommands">#</a>
-		<code><a href="source-class-System.CliApp.html#50-134" title="Go to source code">getAvailableCommands</a>( )</code>
+		<code><a href="source-class-System.CliApp.html#32-116" title="Go to source code">getAvailableCommands</a>( )</code>
 
 		<div class="description short">
 			<p>Automatic get all available commands in System\Core\Console and Modules&#91;ModuleName]\Console</p>
@@ -268,7 +308,7 @@ It is required symfony/console which will be installed with development mode in 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="run" id="_run">
+	<tr data-order="runCli" id="_runCli">
 
 		<td class="attributes"><code>
 			 public 
@@ -279,8 +319,8 @@ It is required symfony/console which will be installed with development mode in 
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_run">#</a>
-		<code><a href="source-class-System.CliApp.html#137-169" title="Go to source code">run</a>( )</code>
+		<a class="anchor" href="#_runCli">#</a>
+		<code><a href="source-class-System.CliApp.html#119-140" title="Go to source code">runCli</a>( )</code>
 
 		<div class="description short">
 			<p>Run the application in command line.<br>
@@ -296,8 +336,6 @@ This method was called from \System\App class -> run() method.</p>
 
 
 
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-System.App.html#_run">System\App::run()</a></code></div>
 
 		</div>
 		</div></td>
@@ -309,11 +347,12 @@ This method was called from \System\App class -> run() method.</p>
 	<tr>
 		<td><code>
 			<a href="class-System.App.html#___construct">__construct()</a>, 
-			<a href="class-System.App.html#_getAppConfig">getAppConfig()</a>, 
+			<a href="class-System.App.html#_appendProfiler">appendProfiler()</a>, 
 			<a href="class-System.App.html#_getSlim">getSlim()</a>, 
-			<a href="class-System.App.html#_prepare">prepare()</a>, 
-			<a href="class-System.App.html#_process">process()</a>, 
-			<a href="class-System.App.html#_setRoutes">setRoutes()</a>
+			<a href="class-System.App.html#_rdsAddDependencies">rdsAddDependencies()</a>, 
+			<a href="class-System.App.html#_rdsAddMiddleware">rdsAddMiddleware()</a>, 
+			<a href="class-System.App.html#_rdsAddRoutes">rdsAddRoutes()</a>, 
+			<a href="class-System.App.html#_run">run()</a>
 		</code></td>
 	</tr>
 	</table>
@@ -363,83 +402,21 @@ This method was called from \System\App class -> run() method.</p>
 			</div>
 		</td>
 	</tr>
-	<tr data-order="Db" id="$Db">
-		<td class="attributes"><code>
-			protected  
-			<code><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></code>
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-System.CliApp.html#32-35" title="Go to source code"><var>$Db</var></a>
-
-			<div class="description short">
-				<p>The Db class.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The Db class.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$Db" class="anchor">#</a>
-				<code></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="SlimApp" id="$SlimApp">
-		<td class="attributes"><code>
-			protected  
-			Slim\App
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-System.CliApp.html#38-41" title="Go to source code"><var>$SlimApp</var></a>
-
-			<div class="description short">
-				<p>Slim application class.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Slim application class.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$SlimApp" class="anchor">#</a>
-				<code></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="SlimContainer" id="$SlimContainer">
-		<td class="attributes"><code>
-			protected  
-			Slim\Container
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-System.CliApp.html#44-47" title="Go to source code"><var>$SlimContainer</var></a>
-
-			<div class="description short">
-				<p>Slim container class.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Slim container class.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$SlimContainer" class="anchor">#</a>
-				<code></code>
-			</div>
-		</td>
-	</tr>
 	</table>
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-System.App.html#properties">System\App</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-System.App.html#$Db"><var>$Db</var></a>, 
+			<a href="class-System.App.html#$SlimApp"><var>$SlimApp</var></a>, 
+			<a href="class-System.App.html#$SlimContainer"><var>$SlimContainer</var></a>, 
+			<a href="class-System.App.html#$addedDependencies"><var>$addedDependencies</var></a>, 
+			<a href="class-System.App.html#$addedMiddleware"><var>$addedMiddleware</var></a>, 
+			<a href="class-System.App.html#$addedRoutes"><var>$addedRoutes</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 	<table class="summary used">
 	<caption>Properties used from <a href="class-System.Traits.Profiler.html#properties">System\Traits\Profiler</a></caption>

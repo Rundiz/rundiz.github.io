@@ -48,6 +48,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li>
 					<a href="namespace-System.html">
@@ -144,6 +178,17 @@
 				<li><a href="class-Modules.Languages.Controllers.GetLanguagesController.html">Modules\Languages\Controllers\GetLanguagesController</a></li>
 				<li><a href="class-Modules.Languages.Controllers.SetLanguageController.html">Modules\Languages\Controllers\SetLanguageController</a></li>
 				<li><a href="class-Modules.Languages.Installer.html">Modules\Languages\Installer</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.AdminBaseController.html">Modules\RdsAdmin\Controllers\Admin\AdminBaseController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.IndexController.html">Modules\RdsAdmin\Controllers\Admin\IndexController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.LoginController.html">Modules\RdsAdmin\Controllers\Admin\LoginController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Controllers.Admin.LogoutController.html">Modules\RdsAdmin\Controllers\Admin\LogoutController</a></li>
+				<li><a href="class-Modules.RdsAdmin.Installer.html">Modules\RdsAdmin\Installer</a></li>
+				<li><a href="class-Modules.RdsAdmin.Libraries.Crypto.html">Modules\RdsAdmin\Libraries\Crypto</a></li>
+				<li><a href="class-Modules.RdsAdmin.Libraries.String.html">Modules\RdsAdmin\Libraries\String</a></li>
+				<li><a href="class-Modules.RdsAdmin.Models.UserLoginsDb.html">Modules\RdsAdmin\Models\UserLoginsDb</a></li>
+				<li><a href="class-Modules.RdsAdmin.Models.UsersDb.html">Modules\RdsAdmin\Models\UsersDb</a></li>
+				<li><a href="class-Modules.RdsAdmin.Tests.CryptoTest.html">Modules\RdsAdmin\Tests\CryptoTest</a></li>
+				<li><a href="class-Modules.RdsAdmin.Tests.StringTest.html">Modules\RdsAdmin\Tests\StringTest</a></li>
 				<li><a href="class-System.App.html">System\App</a></li>
 				<li><a href="class-System.CliApp.html">System\CliApp</a></li>
 				<li><a href="class-System.Core.Console.BaseConsole.html">System\Core\Console\BaseConsole</a></li>
@@ -162,11 +207,13 @@
 				<li><a href="class-System.Core.Models.ThemesDb.html">System\Core\Models\ThemesDb</a></li>
 				<li><a href="class-System.Libraries.Assets.html">System\Libraries\Assets</a></li>
 				<li><a href="class-System.Libraries.Autoload.html">System\Libraries\Autoload</a></li>
+				<li><a href="class-System.Libraries.Cache.html">System\Libraries\Cache</a></li>
 				<li><a href="class-System.Libraries.Config.html">System\Libraries\Config</a></li>
 				<li><a href="class-System.Libraries.Db.Bootstrap.html">System\Libraries\Db\Bootstrap</a></li>
 				<li><a href="class-System.Libraries.Db.Db.html">System\Libraries\Db\Db</a></li>
 				<li><a href="class-System.Libraries.Db.Logger.html">System\Libraries\Db\Logger</a></li>
 				<li><a href="class-System.Libraries.FileSystem.html">System\Libraries\FileSystem</a></li>
+				<li><a href="class-System.Libraries.Input.html">System\Libraries\Input</a></li>
 				<li><a href="class-System.Libraries.Languages.html">System\Libraries\Languages</a></li>
 				<li><a href="class-System.Libraries.Log.html">System\Libraries\Log</a></li>
 				<li><a href="class-System.Libraries.Modules.html">System\Libraries\Modules</a></li>
@@ -179,6 +226,9 @@
 				<li><a href="class-Tests.Rds.BaseTestCase.html">Tests\Rds\BaseTestCase</a></li>
 				<li><a href="class-Tests.Rds.HomeTest.html">Tests\Rds\HomeTest</a></li>
 				<li><a href="class-Tests.Rds.Libraries.AssetsTest.html">Tests\Rds\Libraries\AssetsTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.DbTest.html">Tests\Rds\Libraries\DbTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.FileSystemTest.html">Tests\Rds\Libraries\FileSystemTest</a></li>
+				<li><a href="class-Tests.Rds.Libraries.InputTest.html">Tests\Rds\Libraries\InputTest</a></li>
 			</ul>
 
 			<h3>Interfaces</h3>
@@ -247,7 +297,7 @@
 </span><span id="12" class="l"><a href="#12"> 12: </a><span class="php-comment">/**
 </span></span><span id="13" class="l"><a href="#13"> 13: </a><span class="php-comment"> * The assets class to work with add (enqueue), remove (dequeue), render the css, js files.
 </span></span><span id="14" class="l"><a href="#14"> 14: </a><span class="php-comment"> * 
-</span></span><span id="15" class="l"><a href="#15"> 15: </a><span class="php-comment"> * The asset locations are at public/assets/*, public/themes/[theme_system_name]/assets/* folders.
+</span></span><span id="15" class="l"><a href="#15"> 15: </a><span class="php-comment"> * The asset locations are at public/assets/*, public/themes/[theme_system_name]/assets/*, public/Modules/[module_system_name]/assets/* folders.
 </span></span><span id="16" class="l"><a href="#16"> 16: </a><span class="php-comment"> *
 </span></span><span id="17" class="l"><a href="#17"> 17: </a><span class="php-comment"> * @author Vee W.
 </span></span><span id="18" class="l"><a href="#18"> 18: </a><span class="php-comment"> */</span>
@@ -335,9 +385,9 @@
 </span><span id="100" class="l"><a href="#100">100: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">stripos</span>(<span class="php-var">$file</span>, <span class="php-quote">'://'</span>) === <span class="php-keyword1">false</span> &amp;&amp; <span class="php-keyword2">stripos</span>(<span class="php-var">$file</span>, <span class="php-quote">'//'</span>) !== <span class="php-num">0</span>) {
 </span><span id="101" class="l"><a href="#101">101: </a>            <span class="php-comment">// if the asset file is local. check that if it exists or not.</span>
 </span><span id="102" class="l"><a href="#102">102: </a>            <span class="php-var">$Url</span> = <span class="php-keyword1">new</span> \<span class="php-keyword2">System</span>\Libraries\Url(<span class="php-var">$this</span>-&gt;CI);
-</span><span id="103" class="l"><a href="#103">103: </a>            <span class="php-var">$file_real_path</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'#'</span>.<span class="php-var">$Url</span>-&gt;getPublicUrl().<span class="php-quote">'#'</span>, PUBLIC_PATH . <span class="php-quote">'/'</span>, <span class="php-var">$file</span>, <span class="php-num">1</span>);
-</span><span id="104" class="l"><a href="#104">104: </a>            <span class="php-var">$file_real_path</span> = <span class="php-keyword2">realpath</span>(<span class="php-var">$file_real_path</span>);
-</span><span id="105" class="l"><a href="#105">105: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_file</span>(<span class="php-var">$file_real_path</span>)) {
+</span><span id="103" class="l"><a href="#103">103: </a>            <span class="php-var">$fileRealPath</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'#'</span>.<span class="php-var">$Url</span>-&gt;getPublicUrl().<span class="php-quote">'#'</span>, PUBLIC_PATH . <span class="php-quote">'/'</span>, <span class="php-var">$file</span>, <span class="php-num">1</span>);
+</span><span id="104" class="l"><a href="#104">104: </a>            <span class="php-var">$fileRealPath</span> = <span class="php-keyword2">realpath</span>(<span class="php-var">$fileRealPath</span>);
+</span><span id="105" class="l"><a href="#105">105: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_file</span>(<span class="php-var">$fileRealPath</span>)) {
 </span><span id="106" class="l"><a href="#106">106: </a>                <span class="php-comment">// if asset file is not exists.</span>
 </span><span id="107" class="l"><a href="#107">107: </a>                <span class="php-var">$backtrace</span> = <span class="php-keyword2">debug_backtrace</span>(DEBUG_BACKTRACE_PROVIDE_OBJECT, <span class="php-num">1</span>);
 </span><span id="108" class="l"><a href="#108">108: </a>                <span class="php-var">$caller</span> = <span class="php-quote">''</span>;
@@ -348,7 +398,7 @@
 </span><span id="113" class="l"><a href="#113">113: </a>                \<span class="php-keyword2">System</span>\Libraries\<span class="php-keyword2">Log</span>::write(<span class="php-quote">''</span>, <span class="php-quote">'warning'</span>, <span class="php-quote">'The asset file is not exists! ({handle} =&gt; {file})'</span>, [<span class="php-quote">'handle'</span> =&gt; <span class="php-var">$handle</span>, <span class="php-quote">'file'</span> =&gt; <span class="php-var">$file</span>, <span class="php-quote">'caller'</span> =&gt; <span class="php-var">$caller</span>]);
 </span><span id="114" class="l"><a href="#114">114: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$caller</span>);
 </span><span id="115" class="l"><a href="#115">115: </a>            }
-</span><span id="116" class="l"><a href="#116">116: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$file_real_path</span>, <span class="php-var">$Url</span>);
+</span><span id="116" class="l"><a href="#116">116: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$fileRealPath</span>, <span class="php-var">$Url</span>);
 </span><span id="117" class="l"><a href="#117">117: </a>        }
 </span><span id="118" class="l"><a href="#118">118: </a>
 </span><span id="119" class="l"><a href="#119">119: </a>        <span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>] = <span class="php-keyword2">array_merge</span>(
@@ -642,16 +692,16 @@
 </span></span><span id="407" class="l"><a href="#407">407: </a><span class="php-comment">     * This method was called from `renderAssets()` method.
 </span></span><span id="408" class="l"><a href="#408">408: </a><span class="php-comment">     * 
 </span></span><span id="409" class="l"><a href="#409">409: </a><span class="php-comment">     * @param array $attributes The associate array of attributes. Example: `['title' =&gt; 'My Title', 'data-id' =&gt; 3]` will becomes `title=&quot;My Title&quot; data-id=&quot;3&quot;`
-</span></span><span id="410" class="l"><a href="#410">410: </a><span class="php-comment">     * @param array $disallow_attributes The 2D array of disallow attribute names. Example: `['id', 'class']` so, the `$attributes` that contain id and class will be removed.
+</span></span><span id="410" class="l"><a href="#410">410: </a><span class="php-comment">     * @param array $disallowAttributes The 2D array of disallow attribute names. Example: `['id', 'class']` so, the `$attributes` that contain id and class will be removed.
 </span></span><span id="411" class="l"><a href="#411">411: </a><span class="php-comment">     * @return string Return generated HTML attributes with trim spaces.
 </span></span><span id="412" class="l"><a href="#412">412: </a><span class="php-comment">     */</span>
-</span><span id="413" class="l"><a href="#413">413: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> generateAttributes(<span class="php-keyword1">array</span> <span class="php-var">$attributes</span>, <span class="php-keyword1">array</span> <span class="php-var">$disallow_attributes</span> = [])
+</span><span id="413" class="l"><a href="#413">413: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> generateAttributes(<span class="php-keyword1">array</span> <span class="php-var">$attributes</span>, <span class="php-keyword1">array</span> <span class="php-var">$disallowAttributes</span> = [])
 </span><span id="414" class="l"><a href="#414">414: </a>    {
 </span><span id="415" class="l"><a href="#415">415: </a>        <span class="php-var">$output</span> = <span class="php-quote">''</span>;
 </span><span id="416" class="l"><a href="#416">416: </a>
 </span><span id="417" class="l"><a href="#417">417: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$attributes</span> <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$value</span>) {
 </span><span id="418" class="l"><a href="#418">418: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_scalar</span>(<span class="php-var">$name</span>)) {
-</span><span id="419" class="l"><a href="#419">419: </a>                <span class="php-keyword1">if</span> (!<span class="php-keyword2">in_array</span>(<span class="php-var">$name</span>, <span class="php-var">$disallow_attributes</span>)) {
+</span><span id="419" class="l"><a href="#419">419: </a>                <span class="php-keyword1">if</span> (!<span class="php-keyword2">in_array</span>(<span class="php-var">$name</span>, <span class="php-var">$disallowAttributes</span>)) {
 </span><span id="420" class="l"><a href="#420">420: </a>                    <span class="php-var">$output</span> .= <span class="php-quote">' '</span> . <span class="php-keyword2">strip_tags</span>(<span class="php-var">$name</span>) . <span class="php-quote">'=&quot;'</span>;
 </span><span id="421" class="l"><a href="#421">421: </a>                    <span class="php-var">$value</span> = (string) <span class="php-var">$value</span>;
 </span><span id="422" class="l"><a href="#422">422: </a>                    <span class="php-var">$output</span> .= <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$value</span>, ENT_QUOTES);
@@ -765,24 +815,24 @@
 </span><span id="530" class="l"><a href="#530">530: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> getDependencyExists(<span class="php-var">$type</span>, <span class="php-keyword1">array</span> <span class="php-var">$dependency</span>)
 </span><span id="531" class="l"><a href="#531">531: </a>    {
 </span><span id="532" class="l"><a href="#532">532: </a>        <span class="php-var">$exists</span> = [];
-</span><span id="533" class="l"><a href="#533">533: </a>        <span class="php-var">$not_exists</span> = [];
+</span><span id="533" class="l"><a href="#533">533: </a>        <span class="php-var">$notExists</span> = [];
 </span><span id="534" class="l"><a href="#534">534: </a>
 </span><span id="535" class="l"><a href="#535">535: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>]) &amp;&amp; <span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>])) {
-</span><span id="536" class="l"><a href="#536">536: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$dependency</span> <span class="php-keyword1">as</span> <span class="php-var">$each_dependency</span>) {
-</span><span id="537" class="l"><a href="#537">537: </a>                <span class="php-var">$each_dependency</span> = (string) <span class="php-var">$each_dependency</span>;
-</span><span id="538" class="l"><a href="#538">538: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$each_dependency</span>, <span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>])) {
-</span><span id="539" class="l"><a href="#539">539: </a>                    <span class="php-var">$exists</span>[] = <span class="php-var">$each_dependency</span>;
+</span><span id="536" class="l"><a href="#536">536: </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$dependency</span> <span class="php-keyword1">as</span> <span class="php-var">$eachDependency</span>) {
+</span><span id="537" class="l"><a href="#537">537: </a>                <span class="php-var">$eachDependency</span> = (string) <span class="php-var">$eachDependency</span>;
+</span><span id="538" class="l"><a href="#538">538: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">array_key_exists</span>(<span class="php-var">$eachDependency</span>, <span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>])) {
+</span><span id="539" class="l"><a href="#539">539: </a>                    <span class="php-var">$exists</span>[] = <span class="php-var">$eachDependency</span>;
 </span><span id="540" class="l"><a href="#540">540: </a>                } <span class="php-keyword1">else</span> {
-</span><span id="541" class="l"><a href="#541">541: </a>                    <span class="php-var">$not_exists</span>[] = <span class="php-var">$each_dependency</span>;
-</span><span id="542" class="l"><a href="#542">542: </a>                    \<span class="php-keyword2">System</span>\Libraries\<span class="php-keyword2">Log</span>::write(<span class="php-quote">''</span>, <span class="php-quote">'warning'</span>, <span class="php-quote">'The asset dependency ('</span> . <span class="php-var">$type</span> . <span class="php-quote">') name &quot;'</span> . <span class="php-var">$each_dependency</span> . <span class="php-quote">'&quot; is not exists.'</span>);
+</span><span id="541" class="l"><a href="#541">541: </a>                    <span class="php-var">$notExists</span>[] = <span class="php-var">$eachDependency</span>;
+</span><span id="542" class="l"><a href="#542">542: </a>                    \<span class="php-keyword2">System</span>\Libraries\<span class="php-keyword2">Log</span>::write(<span class="php-quote">''</span>, <span class="php-quote">'warning'</span>, <span class="php-quote">'The asset dependency ('</span> . <span class="php-var">$type</span> . <span class="php-quote">') name &quot;'</span> . <span class="php-var">$eachDependency</span> . <span class="php-quote">'&quot; is not exists.'</span>);
 </span><span id="543" class="l"><a href="#543">543: </a>                }
 </span><span id="544" class="l"><a href="#544">544: </a>            }<span class="php-comment">// endforeach;</span>
-</span><span id="545" class="l"><a href="#545">545: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$each_dependency</span>);
+</span><span id="545" class="l"><a href="#545">545: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$eachDependency</span>);
 </span><span id="546" class="l"><a href="#546">546: </a>        }
 </span><span id="547" class="l"><a href="#547">547: </a>
 </span><span id="548" class="l"><a href="#548">548: </a>        <span class="php-keyword1">return</span> [
 </span><span id="549" class="l"><a href="#549">549: </a>            <span class="php-quote">'exists'</span> =&gt; <span class="php-var">$exists</span>,
-</span><span id="550" class="l"><a href="#550">550: </a>            <span class="php-quote">'not_exists'</span> =&gt; <span class="php-var">$not_exists</span>,
+</span><span id="550" class="l"><a href="#550">550: </a>            <span class="php-quote">'not_exists'</span> =&gt; <span class="php-var">$notExists</span>,
 </span><span id="551" class="l"><a href="#551">551: </a>        ];
 </span><span id="552" class="l"><a href="#552">552: </a>    }<span class="php-comment">// isDependencyExists</span>
 </span><span id="553" class="l"><a href="#553">553: </a>
@@ -871,11 +921,11 @@
 </span><span id="636" class="l"><a href="#636">636: </a>                            <span class="php-var">$output</span> .= <span class="php-var">$this</span>-&gt;generateAssetUrlWithVersion(<span class="php-var">$item</span>);
 </span><span id="637" class="l"><a href="#637">637: </a>                            <span class="php-var">$output</span> .= <span class="php-quote">'&quot;'</span>;<span class="php-comment">// end quote of href=&quot;...&quot;</span>
 </span><span id="638" class="l"><a href="#638">638: </a>                            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$item</span>[<span class="php-quote">'attributes'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$item</span>[<span class="php-quote">'attributes'</span>])) {
-</span><span id="639" class="l"><a href="#639">639: </a>                                <span class="php-var">$generated_atts</span> = <span class="php-var">$this</span>-&gt;generateAttributes(<span class="php-var">$item</span>[<span class="php-quote">'attributes'</span>], [<span class="php-quote">'id'</span>, <span class="php-quote">'href'</span>, <span class="php-quote">'rel'</span>, <span class="php-quote">'type'</span>]);
-</span><span id="640" class="l"><a href="#640">640: </a>                                <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$generated_atts</span>)) {
-</span><span id="641" class="l"><a href="#641">641: </a>                                    <span class="php-var">$output</span> .= <span class="php-quote">' '</span> . <span class="php-var">$generated_atts</span>;
+</span><span id="639" class="l"><a href="#639">639: </a>                                <span class="php-var">$generatedAtts</span> = <span class="php-var">$this</span>-&gt;generateAttributes(<span class="php-var">$item</span>[<span class="php-quote">'attributes'</span>], [<span class="php-quote">'id'</span>, <span class="php-quote">'href'</span>, <span class="php-quote">'rel'</span>, <span class="php-quote">'type'</span>]);
+</span><span id="640" class="l"><a href="#640">640: </a>                                <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$generatedAtts</span>)) {
+</span><span id="641" class="l"><a href="#641">641: </a>                                    <span class="php-var">$output</span> .= <span class="php-quote">' '</span> . <span class="php-var">$generatedAtts</span>;
 </span><span id="642" class="l"><a href="#642">642: </a>                                }
-</span><span id="643" class="l"><a href="#643">643: </a>                                <span class="php-keyword1">unset</span>(<span class="php-var">$generated_atts</span>);
+</span><span id="643" class="l"><a href="#643">643: </a>                                <span class="php-keyword1">unset</span>(<span class="php-var">$generatedAtts</span>);
 </span><span id="644" class="l"><a href="#644">644: </a>                            }
 </span><span id="645" class="l"><a href="#645">645: </a>                            <span class="php-var">$output</span> .= <span class="php-quote">'&gt;'</span>.<span class="php-quote">&quot;\n&quot;</span>;<span class="php-comment">// end &lt;link&gt; element.</span>
 </span><span id="646" class="l"><a href="#646">646: </a>                            <span class="php-var">$output</span> .= <span class="php-var">$this</span>-&gt;generateInlineStyle(<span class="php-var">$item</span>);
@@ -900,11 +950,11 @@
 </span><span id="665" class="l"><a href="#665">665: </a>                            <span class="php-var">$output</span> .= <span class="php-var">$this</span>-&gt;generateAssetUrlWithVersion(<span class="php-var">$item</span>);
 </span><span id="666" class="l"><a href="#666">666: </a>                            <span class="php-var">$output</span> .= <span class="php-quote">'&quot;'</span>;<span class="php-comment">// end quote of src=&quot;...&quot;</span>
 </span><span id="667" class="l"><a href="#667">667: </a>                            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$item</span>[<span class="php-quote">'attributes'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$item</span>[<span class="php-quote">'attributes'</span>])) {
-</span><span id="668" class="l"><a href="#668">668: </a>                                <span class="php-var">$generated_atts</span> = <span class="php-var">$this</span>-&gt;generateAttributes(<span class="php-var">$item</span>[<span class="php-quote">'attributes'</span>], [<span class="php-quote">'id'</span>, <span class="php-quote">'src'</span>]);
-</span><span id="669" class="l"><a href="#669">669: </a>                                <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$generated_atts</span>)) {
-</span><span id="670" class="l"><a href="#670">670: </a>                                    <span class="php-var">$output</span> .= <span class="php-quote">' '</span> . <span class="php-var">$generated_atts</span>;
+</span><span id="668" class="l"><a href="#668">668: </a>                                <span class="php-var">$generatedAtts</span> = <span class="php-var">$this</span>-&gt;generateAttributes(<span class="php-var">$item</span>[<span class="php-quote">'attributes'</span>], [<span class="php-quote">'id'</span>, <span class="php-quote">'src'</span>]);
+</span><span id="669" class="l"><a href="#669">669: </a>                                <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$generatedAtts</span>)) {
+</span><span id="670" class="l"><a href="#670">670: </a>                                    <span class="php-var">$output</span> .= <span class="php-quote">' '</span> . <span class="php-var">$generatedAtts</span>;
 </span><span id="671" class="l"><a href="#671">671: </a>                                }
-</span><span id="672" class="l"><a href="#672">672: </a>                                <span class="php-keyword1">unset</span>(<span class="php-var">$generated_atts</span>);
+</span><span id="672" class="l"><a href="#672">672: </a>                                <span class="php-keyword1">unset</span>(<span class="php-var">$generatedAtts</span>);
 </span><span id="673" class="l"><a href="#673">673: </a>                            }
 </span><span id="674" class="l"><a href="#674">674: </a>                            <span class="php-var">$output</span> .= <span class="php-quote">'&gt;&lt;/script&gt;'</span>.<span class="php-quote">&quot;\n&quot;</span>;<span class="php-comment">// end &lt;script&gt; element.</span>
 </span><span id="675" class="l"><a href="#675">675: </a>                            <span class="php-var">$output</span> .= <span class="php-var">$this</span>-&gt;generateInlineScript(<span class="php-var">$item</span>, <span class="php-quote">'after'</span>);
@@ -980,34 +1030,34 @@
 </span><span id="745" class="l"><a href="#745">745: </a>                    }
 </span><span id="746" class="l"><a href="#746">746: </a>                }<span class="php-comment">// endforeach;</span>
 </span><span id="747" class="l"><a href="#747">747: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$handle</span>, <span class="php-var">$item</span>);
-</span><span id="748" class="l"><a href="#748">748: </a>                <span class="php-var">$sorted_handles</span> = <span class="php-var">$Sorter</span>-&gt;<span class="php-keyword2">sort</span>();
+</span><span id="748" class="l"><a href="#748">748: </a>                <span class="php-var">$sortedHandles</span> = <span class="php-var">$Sorter</span>-&gt;<span class="php-keyword2">sort</span>();
 </span><span id="749" class="l"><a href="#749">749: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$Sorter</span>);
 </span><span id="750" class="l"><a href="#750">750: </a>            } <span class="php-keyword1">catch</span> (\Exception <span class="php-var">$e</span>) {
 </span><span id="751" class="l"><a href="#751">751: </a>                <span class="php-var">$backtrace</span> = <span class="php-keyword2">debug_backtrace</span>(DEBUG_BACKTRACE_PROVIDE_OBJECT);
-</span><span id="752" class="l"><a href="#752">752: </a>                <span class="php-var">$trace_log</span> = [];
+</span><span id="752" class="l"><a href="#752">752: </a>                <span class="php-var">$traceLog</span> = [];
 </span><span id="753" class="l"><a href="#753">753: </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$backtrace</span>)) {
 </span><span id="754" class="l"><a href="#754">754: </a>                    <span class="php-keyword1">foreach</span> (<span class="php-var">$backtrace</span> <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$item</span>) {
 </span><span id="755" class="l"><a href="#755">755: </a>                        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$item</span>[<span class="php-quote">'file'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$item</span>[<span class="php-quote">'line'</span>])) {
-</span><span id="756" class="l"><a href="#756">756: </a>                            <span class="php-var">$trace_log</span>[] = <span class="php-var">$item</span>[<span class="php-quote">'file'</span>] . <span class="php-quote">' line '</span> . <span class="php-var">$item</span>[<span class="php-quote">'line'</span>];
+</span><span id="756" class="l"><a href="#756">756: </a>                            <span class="php-var">$traceLog</span>[] = <span class="php-var">$item</span>[<span class="php-quote">'file'</span>] . <span class="php-quote">' line '</span> . <span class="php-var">$item</span>[<span class="php-quote">'line'</span>];
 </span><span id="757" class="l"><a href="#757">757: </a>                        }
 </span><span id="758" class="l"><a href="#758">758: </a>                    }<span class="php-comment">// endforeach;</span>
 </span><span id="759" class="l"><a href="#759">759: </a>                    <span class="php-keyword1">unset</span>(<span class="php-var">$item</span>, <span class="php-var">$key</span>);
 </span><span id="760" class="l"><a href="#760">760: </a>                }
 </span><span id="761" class="l"><a href="#761">761: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$backtrace</span>);
-</span><span id="762" class="l"><a href="#762">762: </a>                \<span class="php-keyword2">System</span>\Libraries\<span class="php-keyword2">Log</span>::write(<span class="php-quote">''</span>, <span class="php-quote">'warning'</span>, <span class="php-quote">'Asset dependency ('</span> . <span class="php-var">$type</span> . <span class="php-quote">') error! '</span> . <span class="php-var">$e</span>-&gt;getMessage() . <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'trace:'</span> . <span class="php-quote">&quot;\n&quot;</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-var">$trace_log</span>));
-</span><span id="763" class="l"><a href="#763">763: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$trace_log</span>);
+</span><span id="762" class="l"><a href="#762">762: </a>                \<span class="php-keyword2">System</span>\Libraries\<span class="php-keyword2">Log</span>::write(<span class="php-quote">''</span>, <span class="php-quote">'warning'</span>, <span class="php-quote">'Asset dependency ('</span> . <span class="php-var">$type</span> . <span class="php-quote">') error! '</span> . <span class="php-var">$e</span>-&gt;getMessage() . <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'trace:'</span> . <span class="php-quote">&quot;\n&quot;</span> . <span class="php-keyword2">implode</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-var">$traceLog</span>));
+</span><span id="763" class="l"><a href="#763">763: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$traceLog</span>);
 </span><span id="764" class="l"><a href="#764">764: </a>            }
 </span><span id="765" class="l"><a href="#765">765: </a>
-</span><span id="766" class="l"><a href="#766">766: </a>            <span class="php-var">$sorted_assets</span> = [];
-</span><span id="767" class="l"><a href="#767">767: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$sorted_handles</span>) &amp;&amp; <span class="php-keyword2">is_array</span>(<span class="php-var">$sorted_handles</span>) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$sorted_handles</span>)) {
-</span><span id="768" class="l"><a href="#768">768: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$sorted_handles</span> <span class="php-keyword1">as</span> <span class="php-var">$handle</span>) {
-</span><span id="769" class="l"><a href="#769">769: </a>                    <span class="php-var">$sorted_assets</span>[<span class="php-var">$handle</span>] = (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>][<span class="php-var">$handle</span>]) ? <span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>][<span class="php-var">$handle</span>] : []);
+</span><span id="766" class="l"><a href="#766">766: </a>            <span class="php-var">$sortedAssets</span> = [];
+</span><span id="767" class="l"><a href="#767">767: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$sortedHandles</span>) &amp;&amp; <span class="php-keyword2">is_array</span>(<span class="php-var">$sortedHandles</span>) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$sortedHandles</span>)) {
+</span><span id="768" class="l"><a href="#768">768: </a>                <span class="php-keyword1">foreach</span> (<span class="php-var">$sortedHandles</span> <span class="php-keyword1">as</span> <span class="php-var">$handle</span>) {
+</span><span id="769" class="l"><a href="#769">769: </a>                    <span class="php-var">$sortedAssets</span>[<span class="php-var">$handle</span>] = (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>][<span class="php-var">$handle</span>]) ? <span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>][<span class="php-var">$handle</span>] : []);
 </span><span id="770" class="l"><a href="#770">770: </a>                }<span class="php-comment">// endforeach;</span>
 </span><span id="771" class="l"><a href="#771">771: </a>                <span class="php-keyword1">unset</span>(<span class="php-var">$handle</span>);
-</span><span id="772" class="l"><a href="#772">772: </a>                <span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>] = <span class="php-var">$sorted_assets</span>;
-</span><span id="773" class="l"><a href="#773">773: </a>                \<span class="php-keyword2">System</span>\Libraries\<span class="php-keyword2">Log</span>::write(<span class="php-quote">''</span>, <span class="php-quote">'info'</span>, <span class="php-quote">'Asset dependency ('</span> . <span class="php-var">$type</span> . <span class="php-quote">') was sorted.'</span>, <span class="php-var">$sorted_assets</span>);
+</span><span id="772" class="l"><a href="#772">772: </a>                <span class="php-var">$this</span>-&gt;addedAssets[<span class="php-var">$type</span>] = <span class="php-var">$sortedAssets</span>;
+</span><span id="773" class="l"><a href="#773">773: </a>                \<span class="php-keyword2">System</span>\Libraries\<span class="php-keyword2">Log</span>::write(<span class="php-quote">''</span>, <span class="php-quote">'info'</span>, <span class="php-quote">'Asset dependency ('</span> . <span class="php-var">$type</span> . <span class="php-quote">') was sorted.'</span>, <span class="php-var">$sortedAssets</span>);
 </span><span id="774" class="l"><a href="#774">774: </a>            }
-</span><span id="775" class="l"><a href="#775">775: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$sorted_assets</span>, <span class="php-var">$sorted_handles</span>);
+</span><span id="775" class="l"><a href="#775">775: </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$sortedAssets</span>, <span class="php-var">$sortedHandles</span>);
 </span><span id="776" class="l"><a href="#776">776: </a>
 </span><span id="777" class="l"><a href="#777">777: </a>            <span class="php-var">$this</span>-&gt;assetSorted[<span class="php-var">$type</span>] = <span class="php-keyword1">true</span>;
 </span><span id="778" class="l"><a href="#778">778: </a>        }
@@ -1045,6 +1095,6 @@
 </div>
 </div>
 <script src="resources/combined.js?f4e2bad254b049a90cec234b4c706e522afe19cc"></script>
-<script src="elementlist.js?07b6799dd655a4406b8d4282a17f8c968a6b496e"></script>
+<script src="elementlist.js?9344ef0605852b3a569c39889cdd7a580ba0eb46"></script>
 </body>
 </html>

@@ -47,6 +47,40 @@
 						Controllers					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.html">
+						RdsAdmin<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.html">
+						Controllers<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Controllers.Admin.html">
+						Admin					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Libraries.html">
+						Libraries					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Models.html">
+						Models					</a>
+
+						</li>
+				<li>
+					<a href="namespace-Modules.RdsAdmin.Tests.html">
+						Tests					</a>
+
+						</li>
 							</ul></li></ul></li>
 				<li class="active">
 					<a href="namespace-System.html">
@@ -140,8 +174,10 @@
 			<ul>
 				<li><a href="class-System.Libraries.Assets.html">Assets</a></li>
 				<li><a href="class-System.Libraries.Autoload.html">Autoload</a></li>
+				<li><a href="class-System.Libraries.Cache.html">Cache</a></li>
 				<li><a href="class-System.Libraries.Config.html">Config</a></li>
 				<li class="active"><a href="class-System.Libraries.FileSystem.html">FileSystem</a></li>
+				<li><a href="class-System.Libraries.Input.html">Input</a></li>
 				<li><a href="class-System.Libraries.Languages.html">Languages</a></li>
 				<li><a href="class-System.Libraries.Log.html">Log</a></li>
 				<li><a href="class-System.Libraries.Modules.html">Modules</a></li>
@@ -201,9 +237,7 @@
 
 
 	<div class="description">
-	<p>Work as connector between project's source code and vendor classes.</p>
-
-<p>This class use league/flysystem library.</p>
+	<p>Works about files and folders.</p>
 	</div>
 
 
@@ -222,7 +256,7 @@
 
 				<b>Author:</b>
 				Vee W.<br>
-			<b>Located at</b> <a href="source-class-System.Libraries.FileSystem.html#12-247" title="Go to source code">System/Libraries/FileSystem.php</a>
+			<b>Located at</b> <a href="source-class-System.Libraries.FileSystem.html#12-352" title="Go to source code">System/Libraries/FileSystem.php</a>
 		<br>
 	</div>
 
@@ -242,7 +276,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#35-51" title="Go to source code">__construct</a>( <span>string <var>$root</var> = <span class="php-quote">''</span></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#27-39" title="Go to source code">__construct</a>( <span>string <var>$root</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			<p>Class constructor.</p>
@@ -265,7 +299,7 @@
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="createFile" id="_createFile">
+	<tr data-order="copyFolderRecursive" id="_copyFolderRecursive">
 
 		<td class="attributes"><code>
 			 public 
@@ -276,8 +310,59 @@
 		</td>
 
 		<td class="name"><div>
+		<a class="anchor" href="#_copyFolderRecursive">#</a>
+		<code><a href="source-class-System.Libraries.FileSystem.html#42-92" title="Go to source code">copyFolderRecursive</a>( <span>string <var>$source</var></span>, <span>string <var>$dest</var></span> )</code>
+
+		<div class="description short">
+			<p>Copy folder recursively.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Copy folder recursively.</p>
+
+<p>Example:</p>
+
+<pre><span class="php-var">$Fs</span> = <span class="php-keyword1">new</span> \<span class="php-keyword2">System</span>\Libraries\FileSystem(<span class="php-quote">'/www/rundizstruct-installed-path/public/Modules'</span>);
+<span class="php-var">$Fs</span>-&gt;copyFolderRecursive(<span class="php-quote">'/www/rundizstruct-installed-path/Modules/MyModule/assets'</span>, <span class="php-quote">'MyModules/assets'</span>);
+<span class="php-comment">// then every thing in /www/rundizstruct-installed-path/Modules/MyModule/assets will be copy to /www/rundizstruct-installed-path/public/Modules/MyModules/assets</span></pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$source</var></dt>
+					<dd>Full path to source folder. No trailing slash.</dd>
+					<dt><var>$dest</var></dt>
+					<dd>Path to destination folder inside the $root in class constructor. No trailing slash.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>Return true on success, false on failure.
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="https://stackoverflow.com/a/7775949/128761">Reference.</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFile" id="_createFile">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
 		<a class="anchor" href="#_createFile">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#54-66" title="Go to source code">createFile</a>( <span>string <var>$path</var></span>, <span>string <var>$contents</var></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#95-107" title="Go to source code">createFile</a>( <span>string <var>$path</var></span>, <span>string <var>$contents</var></span> )</code>
 
 		<div class="description short">
 			<p>Create new file.</p>
@@ -299,7 +384,7 @@
 
 				<h4>Returns</h4>
 				<div class="list">
-					boolean<br>Return true on success, false on failure.
+					mixed<br>Returns the number of bytes that were written to the file, or FALSE on failure.
 				</div>
 
 
@@ -320,7 +405,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createFolder">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#69-78" title="Go to source code">createFolder</a>( <span>string <var>$dirname</var></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#110-130" title="Go to source code">createFolder</a>( <span>string <var>$dirname</var></span> )</code>
 
 		<div class="description short">
 			<p>Create folder.</p>
@@ -359,7 +444,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_deleteFolder">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#81-121" title="Go to source code">deleteFolder</a>( <span>string <var>$dirname</var></span>, <span>boolean <var>$delete_self</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#133-187" title="Go to source code">deleteFolder</a>( <span>string <var>$dirname</var></span>, <span>boolean <var>$deleteSelf</var> = <span class="php-keyword1">false</span></span>, <span>integer <var>&amp; $deleted</var> = <span class="php-num">0</span></span>, <span>string <var>$dirnameSelf</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Delete folder and its content.</p>
@@ -373,8 +458,12 @@
 				<div class="list"><dl>
 					<dt><var>$dirname</var></dt>
 					<dd>The folder name that is not included with $root in the constructor. The folder name can included sub folders such as path1/sub1/sub2.</dd>
-					<dt><var>$delete_self</var></dt>
+					<dt><var>$deleteSelf</var></dt>
 					<dd>Delete $dirname itself if true, false will just delete all files and sub folders in it.</dd>
+					<dt><var>$deleted</var></dt>
+					<dd>Dot not set this, it is for count number of deleted items. Do not set this in your calls.</dd>
+					<dt><var>$dirnameSelf</var></dt>
+					<dd>Do not set this, it is for checking prevent delete self. Do not set this in your calls.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -393,14 +482,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			string|false
+			integer|false
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getTimestamp">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#124-133" title="Go to source code">getTimestamp</a>( <span>string <var>$path</var></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#190-204" title="Go to source code">getTimestamp</a>( <span>string <var>$path</var></span> )</code>
 
 		<div class="description short">
 			<p>Get file timestamp.</p>
@@ -418,7 +507,7 @@
 
 				<h4>Returns</h4>
 				<div class="list">
-					string|false<br>Return timestamp or false on failure.
+					integer|false<br>Return timestamp or false on failure.
 				</div>
 
 
@@ -439,7 +528,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isDir">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#136-179" title="Go to source code">isDir</a>( <span>string <var>$path</var></span>, <span>boolean|null <var>$case_sensitive</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#207-250" title="Go to source code">isDir</a>( <span>string <var>$path</var></span>, <span>boolean|null <var>$caseSensitive</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Check for is file exists and it is folder (or directory).</p>
@@ -453,7 +542,7 @@
 				<div class="list"><dl>
 					<dt><var>$path</var></dt>
 					<dd>Path to the folder (or directory) to check, it must be inside the $root in class constructor.</dd>
-					<dt><var>$case_sensitive</var></dt>
+					<dt><var>$caseSensitive</var></dt>
 					<dd>Set to <code>true</code> to check by case sensitive, <code>false</code> to case insensitive, null means up to the OS. The null value will be use PHP <code>is_dir()</code> function.</dd>
 				</dl></div>
 
@@ -480,7 +569,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isFile">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#182-218" title="Go to source code">isFile</a>( <span>string <var>$path</var></span>, <span>boolean|null <var>$case_sensitive</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#253-289" title="Go to source code">isFile</a>( <span>string <var>$path</var></span>, <span>boolean|null <var>$caseSensitive</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Check for is file exists and it is file.</p>
@@ -494,7 +583,7 @@
 				<div class="list"><dl>
 					<dt><var>$path</var></dt>
 					<dd>Path to the file to check, it must be inside the $root in class constructor.</dd>
-					<dt><var>$case_sensitive</var></dt>
+					<dt><var>$caseSensitive</var></dt>
 					<dd>Set to <code>true</code> to check by case sensitive, <code>false</code> to case insensitive, null means up to the OS. The null value will be use PHP <code>is_file()</code> function.</dd>
 				</dl></div>
 
@@ -521,7 +610,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_listFilesSubFolders">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#221-231" title="Go to source code">listFilesSubFolders</a>( <span>string <var>$dirname</var></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#292-322" title="Go to source code">listFilesSubFolders</a>( <span>string <var>$dirname</var></span>, <span>array <var>&amp; $files</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>List all files and subfolders in specified $dirname.</p>
@@ -535,11 +624,52 @@
 				<div class="list"><dl>
 					<dt><var>$dirname</var></dt>
 					<dd>Path to folder inside the root.</dd>
+					<dt><var>$files</var></dt>
+					<dd>For access currently listed folders &amp; files. Do not set value to this argument.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					array<br>Return the array list of files and sub folders. Example: dirname is a then result will be <code>array(0 =&gt; a/1, 1 =&gt;  a/1/1.1, 2 =&gt; a/1/1.1/1.1.txt, 3 =&gt; a/aa, 4 =&gt; a/aa/aaa)</code>
+					array<br>Return the array list of files and sub folders. Example: if dirname is a then result will be <code>array(0 =&gt; a/1, 1 =&gt;  a/1/1.1, 2 =&gt; a/1/1.1/1.1.txt, 3 =&gt; a/aa, 4 =&gt; a/aa/aaa)</code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeUpperPath" id="_removeUpperPath">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeUpperPath">#</a>
+		<code><a href="source-class-System.Libraries.FileSystem.html#325-335" title="Go to source code">removeUpperPath</a>( <span>string <var>$path</var></span> )</code>
+
+		<div class="description short">
+			<p>Remove any upper path string such as ../ from string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Remove any upper path string such as ../ from string.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
 				</div>
 
 
@@ -553,14 +683,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			boolean
+			mixed
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_writeFile">#</a>
-		<code><a href="source-class-System.Libraries.FileSystem.html#234-244" title="Go to source code">writeFile</a>( <span>string <var>$path</var></span>, <span>string <var>$contents</var></span> )</code>
+		<code><a href="source-class-System.Libraries.FileSystem.html#338-349" title="Go to source code">writeFile</a>( <span>string <var>$path</var></span>, <span>string <var>$contents</var></span> )</code>
 
 		<div class="description short">
 			<p>Write file. (Create a file).</p>
@@ -580,7 +710,7 @@
 
 				<h4>Returns</h4>
 				<div class="list">
-					boolean<br>Return true on success, false on failure.
+					mixed<br>Returns the number of bytes that were written to the file, or FALSE on failure.
 				</div>
 
 
@@ -604,31 +734,6 @@
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="FileSystem" id="$FileSystem">
-		<td class="attributes"><code>
-			protected  
-			League\Flysystem\Filesystem
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-System.Libraries.FileSystem.html#23-26" title="Go to source code"><var>$FileSystem</var></a>
-
-			<div class="description short">
-				<p>Leagus's Filesystem class.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Leagus's Filesystem class.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$FileSystem" class="anchor">#</a>
-				<code></code>
-			</div>
-		</td>
-	</tr>
 	<tr data-order="root" id="$root">
 		<td class="attributes"><code>
 			protected  
@@ -636,7 +741,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-System.Libraries.FileSystem.html#29-32" title="Go to source code"><var>$root</var></a>
+				<a href="source-class-System.Libraries.FileSystem.html#21-24" title="Go to source code"><var>$root</var></a>
 
 			<div class="description short">
 				<p>Path to root folder that this class will be working with. No trailing slash.</p>
